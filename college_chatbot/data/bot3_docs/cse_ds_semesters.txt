@@ -1,0 +1,23 @@
+In Semester 1 of the CSE (Data Science) programme, students study the following subjects:
+
+Linear Algebra, Calculus and Differential Equations with 3 credits.
+Engineering Physics with 3 credits.
+Basic Electrical and Electronics Engineering with 3 credits.
+Programming for Problem Solving with 4 credits.
+Engineering Physics Lab with 1 credit.
+Basic Electrical and Electronics Engineering Lab with 1 credit.
+Programming for Problem Solving Lab with 1.5 credits.
+Engineering Graphics with 2 credits.
+NSS, NCC, or Community Service with 0.5 credits.
+In Semester 2, the subjects include:
+
+Integral Calculus and Transforms with 3 credits.
+Engineering Chemistry with 2 credits.
+Communicative English with 2 credits.
+Digital Logic Design with 3 credits.
+Python for Data Science with 2 credits.
+Data Structures with 4 credits.
+Associated laboratory courses and health and wellness activities.
+From Semester 3 onwards, core subjects in the CSE (Data Science) programme include Discrete Mathematical Structures, Computer Organization, Object Oriented Programming, Data Visualization, Design and Analysis of Algorithms, Artificial Intelligence, Database Management Systems, Operating Systems, Software Engineering, Computer Networks, Big Data Processing, Deep Learning, Cloud Computing, Natural Language Processing, and Internship and Project work.
+
+Each semester also includes laboratory courses, skill enhancement courses, professional electives, open electives, internships, and mandatory courses.

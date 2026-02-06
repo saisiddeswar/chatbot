@@ -1,0 +1,205 @@
+# RVRJCCE Programs and Admissions
+
+## Undergraduate B.Tech Programs
+
+### Overview
+RVRJCCE offers 10 diverse B.Tech programs catering to different engineering disciplines and specializations. The undergraduate program is designed with a balanced curriculum covering theoretical foundations and practical applications.
+
+### Core Engineering Programs
+
+**1. Civil Engineering (120 seats)**
+- Focus on infrastructure, construction, and structural design
+- Curriculum covers surveying, building design, water resources, and transportation
+- Practical training through internships and site visits
+- Career opportunities in government organizations, construction companies, and consulting firms
+
+**2. Mechanical Engineering (120 seats)**
+- Comprehensive training in mechanical systems design and analysis
+- Areas include thermodynamics, fluid mechanics, machine design, manufacturing
+- Laboratory experience with CAD software and manufacturing equipment
+- Placements in automotive, power, and manufacturing sectors
+
+**3. Electronics & Communication Engineering - ECE (180 seats)**
+- Training in electronic devices, communication systems, and signal processing
+- Specializations in analog/digital electronics, embedded systems, RF communications
+- Hands-on experience with electronics labs and communication equipment
+- Industry demand from telecom, defense, and semiconductor companies
+
+**4. Electrical & Electronics Engineering - EEE (120 seats)**
+- Focus on power systems, electrical machines, and electronics
+- Coverage of power generation, transmission, and distribution
+- Training in electrical equipment and power electronics
+- Career paths in power utilities, industries, and renewable energy sectors
+
+**5. Chemical Engineering (60 seats)**
+- Process design, chemical reactions, and industrial operations
+- Specializations in petrochemicals, pharmaceuticals, and food processing
+- Laboratory work with chemical processing equipment
+- Opportunities in chemical, pharmaceutical, and process industries
+
+### Computer Science & Engineering Programs
+
+**6. Computer Science & Engineering - CSE (360 seats)**
+- Core CSE program covering programming, databases, algorithms, and software engineering
+- Foundation for all computer science specializations
+- Strong industry-oriented curriculum with latest programming languages and tools
+- Highest enrollment with 360 seats
+
+**7. Information Technology - IT (180 seats)**
+- Practical IT focus with emphasis on application development and IT services
+- Coverage of web technologies, databases, networking, and IT infrastructure
+- Oriented towards IT service companies and software development
+- Strong track record in IT industry placements
+
+**8. Computer Science & Business Systems - CSBS (60 seats)**
+- Unique integration of computer science and business management
+- Curriculum includes both technical CS concepts and business fundamentals
+- Prepares students for management and IT consultancy roles
+- Ideal for those interested in IT management and business operations
+
+### Specialized CSE Tracks (New Age Programs)
+
+**9. CSE with Artificial Intelligence & Machine Learning (180 seats)**
+- Advanced specialization in AI and ML technologies
+- Curriculum covers machine learning algorithms, deep learning, natural language processing, computer vision
+- Industry-focused projects and emerging technology training
+- High demand specialization with excellent placement prospects
+
+**10. CSE with Data Science (180 seats)**
+- Specialization focusing on data analytics, big data, and business intelligence
+- Training in data processing, statistical analysis, visualization, and predictive modeling
+- Hands-on experience with tools like Python, R, SQL, and big data platforms
+- Growing field with strong industry demand from tech companies and analytics firms
+
+**11. CSE with Internet of Things - IoT (60 seats)**
+- Emerging specialization covering IoT systems, embedded systems, and sensor networks
+- Curriculum includes microcontrollers, wireless communication, IoT platforms, and cloud integration
+- Practical training with IoT hardware kits and embedded systems
+- Career opportunities in smart devices, industrial IoT, and connected systems
+
+### Business Program
+
+**12. Bachelor of Business Administration - B.B.A. (60 seats)**
+- Three-year management program for business and entrepreneurship
+- Curriculum covers business management, finance, marketing, HR, and operations
+- Case studies and business simulations for practical learning
+- Prepares for business roles and MBA programs
+
+## Admission Process
+
+### EAPCET (70% of seats)
+- Engineering, Agriculture and Medical Common Entrance Test conducted by Andhra Pradesh government
+- Merit-based seat allotment on EAPCET rank
+- Convener manages centralized counselling
+- All candidates appear for same entrance test
+
+### Management Quota (30% of seats)
+- Reserved for direct admission by the college on merit basis
+- Rank-based selection process
+- Merit order determined by academic performance
+- Subject to government approval and norms
+
+### Lateral Entry - 2nd Year (10% additional seats)
+- For Diploma holders in engineering branches
+- Engineering Common Entrance Test (ECET) required
+- Equivalent to completing 1st year
+- Direct admission to 2nd year B.Tech
+
+## Eligibility Criteria
+
+### For Direct B.Tech Admission (1st Year)
+- Minimum education: Completed 10+2 with MPC (Physics, Mathematics, Chemistry)
+- Subject requirements: Physics, Mathematics, Chemistry mandatory
+- Age: No age restrictions
+- Nationality: Indian citizens (NRI/OCI candidates eligible)
+- EAPCET rank required for 70% seats
+- Statutory reservations as per government norms
+
+### For Lateral Entry (2nd Year)
+- Minimum education: Completed 3-year Diploma in Engineering
+- ECET rank required for seat allotment
+- Equivalent status at 2nd year level
+- Subject should match with B.Tech branch
+
+## Selection Process
+
+1. **Rank Declaration**: EAPCET/ECET authorities publish merit list and ranks
+2. **Counselling**: Centralized counselling by Convener EAPCET conducted
+3. **Option Entry**: Candidates exercise choices for college and branch
+4. **Seat Allotment**: Seats allocated based on rank and choices
+5. **Document Verification**: Candidates verify documents at allotted college
+6. **Admission**: Final admission after verification and fee payment
+7. **Ratification**: All admissions ratified by Government of AP
+
+## Intake Summary
+
+| Category | Seats |
+|----------|-------|
+| Civil Engineering | 120 |
+| Mechanical Engineering | 120 |
+| ECE | 180 |
+| CSE | 360 |
+| EEE | 120 |
+| Chemical | 60 |
+| IT | 180 |
+| CSBS | 60 |
+| CSE-AI&ML | 180 |
+| CSE-DataScience | 180 |
+| CSE-IoT | 60 |
+| B.B.A. | 60 |
+| **Total UG** | **1,680** |
+
+## Important Information
+
+### Contact for Admissions
+- **Phone**: 94910 73318
+- **Office**: Admissions office, RVRJCCE campus
+- **Timings**: During academic session
+
+### Documents Required
+- 10+2 original certificates and mark sheets
+- EAPCET admit card and hall ticket
+- Caste certificate (if applicable)
+- Income certificate (if applicable)
+- Address proof and identity proof
+- Passport size photographs
+
+### Fee Payment
+- Fees can be paid online or at college
+- Installment options available
+- Scholarship eligible students get reduced fees
+- Financial assistance programs available
+
+### Important Dates
+- Contact admissions for current academic year dates
+- EAPCET notification usually in May
+- Counselling conducted in July-August
+- Classes commence in August/September
+
+## Postgraduate Programs (Master's Degrees)
+
+### M.C.A. (Master of Computer Applications) - 60 seats
+- 3-year postgraduate program in advanced computing
+- Focus on software development, database systems, and IT services
+- Entrance examination and merit-based selection
+- Strong IT industry orientation
+
+### M.B.A. (Master of Business Administration) - 120 seats
+- 2-year management postgraduate degree
+- Specializations in various management domains
+- Entrance examination (CAT/MAT/others) considered
+- Prepares for management and leadership roles
+
+### M.Tech Programs - Specialized Master's in Technology (6 seats each)
+1. Computer Science & Engineering
+2. Structural Engineering
+3. Power Systems Engineering
+4. VLSI Design
+5. Machine Design
+6. Artificial Intelligence & Data Science
+
+**Total PG Intake: 216 seats**
+
+## University Affiliation
+
+RVRJCCE is an autonomous institution under UGC, maintaining academic standards equivalent to leading technical universities. Programs are aligned with national curriculum standards and industry requirements.

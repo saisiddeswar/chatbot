@@ -1,0 +1,31 @@
+Undergraduate Engineering Programmes (B.Tech) offered by the college and their approved intake are listed below.
+
+Civil Engineering has an approved intake of 120 students.
+Mechanical Engineering has an approved intake of 120 students.
+Electronics and Communication Engineering has an approved intake of 180 students.
+Computer Science and Engineering has an approved intake of 360 students.
+Electrical and Electronics Engineering has an approved intake of 120 students.
+Chemical Engineering has an approved intake of 60 students.
+Information Technology has an approved intake of 180 students.
+Computer Science and Business Systems has an approved intake of 60 students.
+Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning has an approved intake of 180 students.
+Computer Science and Engineering with specialization in Data Science has an approved intake of 180 students.
+Computer Science and Engineering with specialization in Internet of Things has an approved intake of 60 students.
+
+The total approved intake for Undergraduate Engineering programmes is 1560 students.
+The college offers an Undergraduate Management programme.
+
+Bachelor of Business Administration (B.B.A.) is offered with an approved intake of 60 students.
+The total approved intake for all Undergraduate programmes including Engineering and Management is 1680 students.
+Postgraduate Programmes offered by the college and their approved intake are listed below.
+
+Master of Computer Applications (M.C.A.) has an approved intake of 60 students.
+Master of Business Administration (M.B.A.) has an approved intake of 120 students.
+M.Tech in Computer Science and Engineering has an approved intake of 6 students.
+M.Tech in Structural Engineering has an approved intake of 6 students.
+M.Tech in Power Systems Engineering has an approved intake of 6 students.
+M.Tech in VLSI has an approved intake of 6 students.
+M.Tech in Machine Design has an approved intake of 6 students.
+M.Tech in Artificial Intelligence and Data Science has an approved intake of 6 students.
+
+The total approved intake for Postgraduate programmes is 216 students.

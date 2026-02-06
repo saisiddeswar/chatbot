@@ -1,0 +1,232 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+    <!-- ================= ADMISSION PROCESS ================= -->
+
+    <category>
+        <pattern>* ADMISSION PROCESS *</pattern>
+        <template>
+            Admissions are conducted through EAPCET counselling and management quota.
+            Students must complete registration and document verification.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ADMISSION START DATE *</pattern>
+        <template>
+            Admissions usually start after EAPCET counselling notifications.
+            Exact dates are announced on the official college website.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* LAST DATE * ADMISSION *</pattern>
+        <template>
+            The last date for admissions depends on the quota and academic year.
+            Please check the latest admission notification for exact deadlines.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* APPLY * BTECH *</pattern>
+        <template>
+            B.Tech admissions are available through EAPCET counselling or management quota.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* MANAGEMENT QUOTA *</pattern>
+        <template>
+            Management quota admissions can be applied directly through the college admissions office.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* EAPCET *</pattern>
+        <template>
+            Admissions through EAPCET are based on entrance exam rank and counselling.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ELIGIBILITY *</pattern>
+        <template>
+            Eligibility depends on qualifying examination marks and entrance exam requirements.
+        </template>
+    </category>
+
+    <!-- ================= TUITION FEES ================= -->
+
+    <category>
+        <pattern>* TUITION FEE *</pattern>
+        <template>
+            Tuition fee through EAPCET is Rs. 1,10,000 per year.
+            Tuition fee through management quota is Rs. 2,50,000 per year.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* FEE * EAPCET *</pattern>
+        <template>
+            The tuition fee through EAPCET is Rs. 1,10,000 per year.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* FEE * MANAGEMENT *</pattern>
+        <template>
+            The tuition fee through management quota is Rs. 2,50,000 per year.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* TOTAL FEE * FIRST YEAR *</pattern>
+        <template>
+            The total first-year fee includes tuition fee, bus fee (if opted),
+            hostel fee (if opted), and other miscellaneous charges.
+        </template>
+    </category>
+
+    <!-- ================= FEE PAYMENT ================= -->
+
+    <category>
+        <pattern>* PAY * FEE *</pattern>
+        <template>
+            Fees can be paid through UPI, debit card, credit card, net banking, or demand draft.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ONLINE * FEE *</pattern>
+        <template>
+            Online fee payment is available through the student portal.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* DUE * FEE *</pattern>
+        <template>
+            Fee due details and payment deadlines can be checked in the student portal.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* LATE FEE *</pattern>
+        <template>
+            Late fee will be charged if payment is made after the deadline.
+        </template>
+    </category>
+
+    <!-- ================= HOSTEL ================= -->
+
+    <category>
+        <pattern>* HOSTEL *</pattern>
+        <template>
+            Hostel facilities are available for students.
+            Hostel fee depends on room type and mess facilities.
+        </template>
+    </category>
+
+    <!-- ================= BUS / TRANSPORT ================= -->
+
+    <category>
+        <pattern>* BUS FEE *</pattern>
+        <template>
+            Bus fee depends on the route selected.
+            Details can be obtained from the transport office.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* BUS TIMING *</pattern>
+        <template>
+            Bus timings vary by route and are announced at the beginning of the academic year.
+        </template>
+    </category>
+
+    <!-- ================= SCHOLARSHIPS ================= -->
+
+    <category>
+        <pattern>* SCHOLARSHIP *</pattern>
+        <template>
+            Scholarships are available for merit and government-eligible categories
+            such as SC, ST, OBC, and EWS students.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* FEE CONCESSION *</pattern>
+        <template>
+            Fee concessions may be available based on eligibility.
+            Please contact the accounts section for details.
+        </template>
+    </category>
+
+    <!-- ================= EXAMS & RESTRICTIONS ================= -->
+
+    <category>
+        <pattern>* HALL TICKET *</pattern>
+        <template>
+            Hall tickets may be blocked if fees are pending.
+            Please clear dues to avoid restrictions.
+        </template>
+    </category>
+
+    <!-- ================= FALLBACK ================= -->
+
+    <category>
+        <pattern>*</pattern>
+        <template>
+            Please contact the college administration or visit the official website for accurate information.
+        </template>
+    </category>
+<!-- ================= EAPCET CUTOFF ================= -->
+
+<category>
+    <pattern>* EAPCET * CUTOFF *</pattern>
+    <template>
+        EAPCET cutoff ranks vary every year based on category and branch.
+        Please check the latest cutoff details on the official college website.
+    </template>
+</category>
+
+<!-- ================= COLLEGE LOCATION ================= -->
+
+<category>
+    <pattern>* LOCATION * COLLEGE *</pattern>
+    <template>
+        The college is located approximately one hour away from Guntur
+        and Chilakalurupet by road.
+    </template>
+</category>
+
+<!-- ================= TRAVEL TIME ================= -->
+
+<category>
+    <pattern>* HOW FAR * COLLEGE *</pattern>
+    <template>
+        The college is around one hour of travel from Guntur
+        and Chilakalurupet.
+    </template>
+</category>
+
+<!-- ================= BUS AVAILABILITY ================= -->
+
+<category>
+    <pattern>* BUS * AVAILABLE *</pattern>
+    <template>
+        College bus transportation is available only for Guntur
+        and Chilakalurupet routes.
+    </template>
+</category>
+
+<!-- ================= BUS FEES ================= -->
+
+<category>
+    <pattern>* BUS FEE *</pattern>
+    <template>
+        Bus fee from Guntur is Rs. 13,000 per year.
+        Bus fee from Chilakalurupet is Rs. 20,000 per year.
+    </template>
+</category>
+
+</aiml>

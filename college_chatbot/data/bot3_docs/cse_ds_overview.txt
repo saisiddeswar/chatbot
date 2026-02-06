@@ -1,0 +1,7 @@
+The Computer Science and Engineering (Data Science) programme follows the R24 regulation scheme.
+
+The programme provides a strong foundation in computer science, statistics, and mathematics relevant to analyzing and manipulating large and complex datasets.
+
+Students are trained in both theoretical concepts and practical applications of data science methods and algorithms.
+
+Graduates of the CSE (Data Science) programme are well prepared for careers in data science and for advanced studies in related fields.

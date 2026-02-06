@@ -1,0 +1,369 @@
+# RVRJCCE Campus Facilities and Student Services
+
+## Campus Infrastructure
+
+### Academic Buildings
+- Modern classrooms equipped with multimedia facilities
+- Lecture halls with projectors and internet connectivity
+- Seminar halls for presentations and workshops
+- Dedicated departmental blocks with faculty offices
+- Administrative buildings
+
+### Laboratories and Practice Areas
+- **Electronics Labs**: Equipped with oscilloscopes, power supplies, and measurement instruments
+- **Computer Labs**: Multiple labs with latest computers and software tools
+- **Mechanical Lab**: Machine tools, hydraulic systems, and material testing equipment
+- **Civil Engineering Lab**: Surveying equipment, concrete testing apparatus
+- **Communication Lab**: Network equipment, RF measurement tools
+- **Electrical Lab**: Power equipment, switchgear, and testing instruments
+- **Manufacturing Lab**: CNC machines, 3D printers, fabrication equipment
+
+### Library and Information Center
+
+**Central Library Features:**
+- Extensive collection of textbooks, reference books, and journals
+- Journals covering engineering, management, and general studies
+- Online databases with IEEE Xplore, ACM Digital Library access
+- Quiet reading areas and group study areas
+- Computer stations for literature search
+- Inter-library loan facilities
+
+**Digital Resources:**
+- Moodle Learning Management System: http://courses.rvrjc.ac.in/moodle/
+- Online course materials and lecture notes
+- Video lectures and educational resources
+- E-journals and research databases
+- Online assessments and assignments
+
+**Library Policies:**
+- Automatic membership for all enrolled students
+- Book circulation policy: 4 books for 15 days
+- Renewal options available
+- Fine for delayed returns
+- Dedicated resource access for research
+
+### Hostel Facilities
+
+**Accommodation Details:**
+- On-campus hostels for boys and girls
+- Premium accommodation with modern amenities
+- Safe and secure residential environment
+- 24-hour security and CCTV surveillance
+- Common areas for recreation and interaction
+
+**Hostel Amenities:**
+- Furnished rooms with basic necessities
+- Common dining facility with hygienic food
+- Internet connectivity in rooms and common areas
+- Sports and recreational facilities
+- Guest rooms for visitors
+
+**Hostel Management:**
+- Warden and support staff on duty
+- Strict discipline and conduct rules
+- Regular maintenance and housekeeping
+- Grievance redressal for residents
+- Contact: https://rvrjcce.ac.in/xhostels.php
+
+### Canteen and Food Services
+
+**Canteen Operations:**
+- Located centrally for easy access
+- Hygienic food preparation and handling
+- Varied menu catering to tastes and preferences
+- Affordable meal rates
+- Quality and freshness ensured
+
+**Meal Timings:**
+- Breakfast: 7:00 AM - 9:00 AM
+- Lunch: 11:00 AM - 12:00 PM and 1:00 PM - 2:00 PM
+- Tea/Snacks: Available throughout day
+- Weekly menu changes displayed
+- Special meals on occasions
+
+### Transportation Facilities
+
+**College Transport System:**
+- Organized routes covering different areas of Guntur
+- New and well-maintained buses
+- Regular maintenance and safety checks
+- Professional drivers with valid licenses
+- CCTV surveillance in buses
+
+**Route Details:**
+- Multiple routes covering city and surrounding areas
+- Fixed pickup and drop-off points
+- Timings adjusted based on academic schedule
+- Emergency assistance available
+- Contact: https://rvrjcce.ac.in/transport.php
+
+**Bus Charges:**
+- Separate fee structure
+- Payment through college online portal
+- Installment options available
+- Concessional rates for economically weak students
+
+### Sports and Recreation
+
+**Sports Facilities:**
+- Cricket ground and pavilion
+- Tennis and badminton courts
+- Basketball and volleyball courts
+- Athletic track for running
+- Gymnasium with equipment
+- Table tennis facilities
+- Chess and board games area
+
+**Sports Programs:**
+- Inter-college competitions and tournaments
+- Annual sports day celebrations
+- Athletic training programs
+- Professional coaching available
+- Sports scholarships for talented athletes
+
+## Student Services and Support
+
+### Academic Services
+
+**Student Portal Access:**
+- Login for grades and transcripts
+- Attendance records viewable
+- Exam schedule access
+- Academic calendar and schedules
+- Assignment submission and feedback
+
+**Examination Support:**
+- Exam cell handles registration and schedule
+- Seating arrangements and invigilation
+- Result processing and publication
+- Grievance handling for exam issues
+- Contact: 9985271179, 9966641530
+
+**Certificate Services:**
+- Bonafide Certificates: For admission to higher education, employment verification
+- Transcripts: Official academic records with marks and grades
+- Original Degree (OD): Final degree certification
+- Conduct Certificates: Character certificates for placements
+- Provisional Certificates: Temporary documents during processing
+- Processing time: 3-5 working days after application
+
+**Service Requirements:**
+- Application form submission (offline or online)
+- Valid student ID required
+- No pending dues on student account
+- Specific fee for each certificate type
+- Multiple copies available if needed
+
+### Student Welfare and Support Services
+
+**Career Guidance Cell:**
+- Aptitude and personality assessment
+- Career path counseling
+- Interview preparation and coaching
+- Resume building and LinkedIn profile
+- Skill development workshops
+- Industry exposure programs
+- Contact: https://rvrjcce.ac.in/xcgc_about.php
+
+**Student Wellness Centre:**
+- Psychological counseling and support
+- Mental health awareness programs
+- Stress management workshops
+- Counselor available for confidential sessions
+- Support for academic and personal issues
+- Crisis intervention services
+- Contact: https://rvrjcce.ac.in/studentwellnesscenter/Project-SWC
+
+**Social Protection Cell:**
+- Support for vulnerable and marginalized students
+- Discrimination and harassment prevention
+- Special assistance programs
+- Counseling and mediation services
+- Scholarship information for underprivileged
+- Contact: https://rvrjcce.ac.in/xsocialprotectioncell.php
+
+### Grievance and Redressal
+
+**Grievance Redressal Cell:**
+- Forum for student complaints and grievances
+- Confidential complaint handling
+- Investigation and resolution process
+- Follow-up on complaint status
+- Regular review meetings
+- Contact: https://rvrjcce.ac.in/xstudgrievances.php
+
+**Internal Complaints Committee:**
+- Handles IC-related complaints (sexual harassment, discrimination)
+- Confidential and impartial investigations
+- Counseling support for complainants
+- Preventive measures implementation
+- Annual report on complaints handled
+- Contact: https://rvrjcce.ac.in/xicicc.php
+
+**Anti-Ragging Cell:**
+- Zero-tolerance policy for ragging
+- Prevention through awareness and orientation
+- Complaint mechanism for ragging incidents
+- Investigation and disciplinary action
+- Counseling for affected students
+- Contact: https://rvrjcce.ac.in/xantiragging.php
+
+### Placement Services
+
+**Training & Placements Office:**
+- Company recruitment coordination
+- Student registration and profile management
+- Mock interviews and test preparation
+- Interview and group discussion coaching
+- Pre-placement talks and company briefings
+- Placement statistics and data maintenance
+
+**Campus Recruitment:**
+- 50+ companies visit for recruitment drives
+- Core and non-core branches offered
+- Average packages in competitive range
+- Highest packages showcased annually
+- Summer internship opportunities
+- Contact: https://rvrjcce.ac.in/xtrainingandplacements.php
+
+**Internship Programs:**
+- Summer internships with leading companies
+- Project-based learning opportunities
+- Industry mentorship during internship
+- Certificate of completion
+- Performance-based job offers
+
+### Co-Curricular Activities
+
+**Student Organizations:**
+- NCC (National Cadet Corps): Military training and leadership development
+- NSS (National Service Scheme): Community service and social responsibility
+- Cultural Club: Drama, music, dance, and art programs
+- IEEE Student Branch: Technical seminars and networking
+- ISTE Chapter: Engineering education and skill development
+- Department-specific clubs and associations
+
+**Events and Festivals:**
+- **Rujangna**: Annual college cultural festival
+- Annual Sports Day with inter-college competitions
+- Technical festivals by departments
+- Seminar and workshop series
+- Industry expert talk series
+- Alumni reunion events
+
+**Co-Curricular Programs:**
+- Drama and theater productions
+- Music and dance performances
+- Art exhibitions and showcases
+- Debate and elocution competitions
+- Photography and videography clubs
+- Games and sports tournaments
+
+## Innovation and Research Support
+
+### Research Centers and Facilities
+
+**R & D Cell:**
+- Facilitates faculty research projects
+- Student research opportunities
+- Publication support and guidance
+- Collaboration with industry for research
+
+**RJ E-NEST (Technology Business Incubator):**
+- Startup incubation and support
+- Mentorship from industry experts
+- Funding and financial assistance
+- Prototyping facility access
+- Legal and regulatory guidance
+
+**AICTE-IDEA Lab:**
+- Innovation development and experimentation
+- Rapid prototyping capability
+- 3D printing and design tools
+- Electronics and embedded systems lab
+- Software development environment
+
+**Institution Innovation Council:**
+- Student innovation competitions
+- Startup challenges
+- Funding support for innovative ideas
+- Industry connect for implementation
+- Recognition and awards
+
+## Financial Services
+
+### Fee Payment System
+
+**Online Payment Portal:**
+- Secure portal for all fee payments
+- Multiple payment options (card, net banking, wallet)
+- Receipt generation and verification
+- Payment history tracking
+- Contact: https://rvrjcce.ac.in/xfeepayments.php
+
+**Fee Categories:**
+- Tuition Fee & Common Services Fee
+- Examination Fee
+- Bus Charges (if availing transport)
+- Late fees applied after due date
+
+**Financial Support:**
+- Scholarships based on merit and need
+- Educational loans assistance
+- Emergency financial assistance for distressed students
+- Scholarship contact: 8790413309, 7901493318
+
+### Finance Contact
+
+- **Phone**: 9493239173, 9490032306
+- **Services**: Fee structure, payment plans, refund policy
+- **Timings**: During working days
+
+## Health and Safety
+
+**Campus Safety Measures:**
+- CCTV surveillance across campus
+- Security personnel and controlled entry points
+- Emergency response system
+- First aid and medical emergency support
+- Regular safety audits and drills
+
+**Health Facilities:**
+- First aid center on campus
+- Health awareness programs
+- Vaccination drives conducted
+- Mental health support services
+- Emergency medical protocol
+
+## Communication and Connectivity
+
+- Campus-wide WiFi connectivity
+- Internet access in labs and library
+- Official communication via email and SMS
+- Digital notice boards
+- Website regular updates
+- Student portal for important information
+
+## College Website and Resources
+
+- **Main Website**: https://rvrjcce.ac.in/
+- **Student Portal**: Grades, attendance, exam schedules
+- **LMS Access**: http://courses.rvrjc.ac.in/moodle/
+- **Alumni Portal**: https://alumni.rvrjcce.ac.in/
+- **Online Payments**: https://rvrjcce.ac.in/xfeepayments.php
+- **Photo Gallery**: https://rvrjcce.ac.in/xgallery.php
+
+## Key Contact Numbers
+
+| Department | Contact | Purpose |
+|------------|---------|---------|
+| Admissions | 94910 73318 | Admission inquiries and process |
+| Exams | 9985271179, 9966641530 | Exam schedules and certificates |
+| Finance | 9493239173, 9490032306 | Fee payment and financial info |
+| Scholarships | 8790413309, 7901493318 | Scholarship applications |
+| Director F&A | 9849519932 | Administrative matters |
+| Principal | 9866281628 | Academic matters |
+
+## Commitment to Excellence
+
+RVRJCCE is dedicated to providing comprehensive support services ensuring students have access to quality infrastructure, learning resources, and personal development opportunities. The college aims to create an inclusive, safe, and conducive environment for academic excellence and holistic student development.

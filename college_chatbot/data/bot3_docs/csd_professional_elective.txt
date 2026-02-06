@@ -1,0 +1,22 @@
+Professional electives offered under the CSE (Data Science) programme include:
+
+Introduction to Machine Learning,
+Data Engineering,
+Soft Computing,
+Digital Image Processing,
+Software Testing Methodologies,
+Automata and Compiler Design,
+Data Science for Engineers,
+Foundations of Cryptography,
+Ethical Hacking,
+Time Series Analysis and Forecasting,
+Programming with Generative AI,
+Blockchain and its Applications,
+Deep Learning for Computer Vision,
+Advanced Computer Architecture,
+Algorithms for Competitive Programming,
+Quantum Algorithms and Cryptography,
+Cyber Security and Privacy.
+Open electives offered by other engineering departments include subjects from Civil Engineering, Chemical Engineering, Electronics and Communication Engineering, Electrical Engineering, and Mechanical Engineering.
+
+Examples include Building Materials and Construction, Renewable Energy Sources, Applied Electronics, Operations Research, Fundamentals of Robotics, and Sustainable Engineering.

@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-02-05T10:15:15.568963",
+  "overall_score": 0.8347167182662538,
+  "status": "\ud83d\udfe1 FAIR",
+  "metrics": [
+    {
+      "name": "classifier_accuracy",
+      "actual": 0.8,
+      "target": 0.85,
+      "gap": -0.04999999999999993,
+      "score": 0.9411764705882354,
+      "percentage": "94.1%",
+      "status": "\ud83d\udfe2 GOOD"
+    },
+    {
+      "name": "classifier_precision",
+      "actual": 0.8867,
+      "target": 0.85,
+      "gap": 0.036700000000000066,
+      "score": 1.0,
+      "percentage": "100.0%",
+      "status": "\ud83d\udfe2 EXCELLENT"
+    },
+    {
+      "name": "classifier_recall",
+      "actual": 0.8,
+      "target": 0.85,
+      "gap": -0.04999999999999993,
+      "score": 0.9411764705882354,
+      "percentage": "94.1%",
+      "status": "\ud83d\udfe2 GOOD"
+    },
+    {
+      "name": "classifier_f1",
+      "actual": 0.8296,
+      "target": 0.85,
+      "gap": -0.020399999999999974,
+      "score": 0.976,
+      "percentage": "97.6%",
+      "status": "\ud83d\udfe2 EXCELLENT"
+    },
+    {
+      "name": "safety_precision",
+      "actual": 1.0,
+      "target": 0.95,
+      "gap": 0.050000000000000044,
+      "score": 1.0,
+      "percentage": "100.0%",
+      "status": "\ud83d\udfe2 EXCELLENT"
+    },
+    {
+      "name": "safety_recall",
+      "actual": 0.7059,
+      "target": 0.95,
+      "gap": -0.24409999999999998,
+      "score": 0.7430526315789474,
+      "percentage": "74.3%",
+      "status": "\ud83d\udfe0 NEEDS IMPROVEMENT"
+    },
+    {
+      "name": "safety_false_negatives",
+      "actual": 5,
+      "target": 0,
+      "gap": 5,
+      "score": 0.5,
+      "percentage": "50.0%",
+      "status": "\ud83d\udd34 CRITICAL"
+    },
+    {
+      "name": "scope_accuracy",
+      "actual": 0.5556,
+      "target": 0.85,
+      "gap": -0.2944,
+      "score": 0.6536470588235294,
+      "percentage": "65.4%",
+      "status": "\ud83d\udfe0 NEEDS IMPROVEMENT"
+    }
+  ],
+  "comparison": {
+    "baseline": "Multi-bot system without confidence routing, safety, or full RAG",
+    "improvements": [
+      "Added 5-layer safety system (77% accuracy, 100% precision)",
+      "Implemented confidence-aware routing (20-47-33% distribution)",
+      "Complete RAG implementation with chunking and metadata",
+      "JSON audit logging for all decisions",
+      "Configurable thresholds for all components"
+    ]
+  }
+}

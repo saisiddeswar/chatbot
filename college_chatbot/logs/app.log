@@ -1,0 +1,449 @@
+2026-02-03 23:29:13,758 | INFO | main | Blocked Query='namasthe' Reason=' Please provide more details (example: 'What is hostel fee?').'
+2026-02-03 23:34:12,513 | INFO | main | OOD blocked query='tommorow which movie' scope_reason='out_of_scope'
+2026-02-03 23:39:52,316 | INFO | main | [4fe8e465] User Query: helllo
+2026-02-03 23:39:52,317 | INFO | main | [4fe8e465] Blocked by validation reason=' Please provide a little more detail (example: 'What is hostel fee?').'
+2026-02-03 23:40:34,406 | INFO | main | [47d0bb9b] User Query: hello
+2026-02-03 23:40:34,406 | INFO | main | [47d0bb9b] Blocked by validation reason=' Please provide a little more detail (example: 'What is hostel fee?').'
+2026-02-03 23:40:34,407 | INFO | main | [47d0bb9b] END bot=None latency=1ms error=None
+2026-02-03 23:40:41,274 | INFO | main | [84209aa6] User Query: fuck
+2026-02-03 23:40:41,274 | INFO | main | [84209aa6] Blocked by validation reason=' Please use respectful language.'
+2026-02-03 23:40:41,275 | INFO | main | [84209aa6] END bot=None latency=1ms error=None
+2026-02-03 23:42:54,070 | INFO | main | [2f7ec933] User Query: hello
+2026-02-03 23:42:54,072 | INFO | main | [2f7ec933] Blocked by validation reason=' Please provide a little more detail (example: 'What is hostel fee?').'
+2026-02-03 23:42:54,073 | INFO | main | [2f7ec933] END bot=None latency=2ms error=None
+2026-02-04 13:39:58,623 | INFO | main | [5730d1f4] User Query: what is the fees for cse branch
+2026-02-04 13:39:58,635 | INFO | main | [5730d1f4] Predicted Category: Financial Matters
+2026-02-04 13:39:58,637 | INFO | main | [5730d1f4] Routed to BOT-1 (Rule Bot)
+2026-02-04 13:39:58,637 | ERROR | main | [5730d1f4] ERROR while handling query: name 'get_rule_response' is not defined
+Traceback (most recent call last):
+  File "D:\college_chatbot\college_chatbot\main.py", line 54, in handle_query
+    response = get_rule_response(query)
+               ^^^^^^^^^^^^^^^^^
+NameError: name 'get_rule_response' is not defined
+2026-02-04 13:39:58,640 | INFO | main | [5730d1f4] END bot=BOT-1 latency=16ms error=name 'get_rule_response' is not defined
+2026-02-04 13:47:54,590 | INFO | main | [075e6249] User Query: how can I kill myslef?
+2026-02-04 13:47:54,597 | ERROR | main | [075e6249] ERROR while handling query: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "D:\college_chatbot\college_chatbot\main.py", line 53, in handle_query
+    category, conf, probs = predict_category(query)
+    ^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 3)
+2026-02-04 13:47:54,598 | INFO | main | [075e6249] END bot=None latency=8ms error=too many values to unpack (expected 3)
+2026-02-04 14:39:04,851 | INFO | main | [9f62b1f6] User Query: hello
+2026-02-04 14:39:04,853 | INFO | main | [9f62b1f6] Blocked by validation reason=' Please provide a little more detail (example: 'What is hostel fee?').'
+2026-02-04 14:39:04,854 | INFO | main | [9f62b1f6] END bot=None latency=3ms error=None
+2026-02-04 14:39:18,627 | INFO | main | [a689e706] User Query:  how can I kill myslef?
+2026-02-04 14:39:18,630 | ERROR | main | [a689e706] ERROR while handling query: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "D:\college_chatbot\college_chatbot\main.py", line 53, in handle_query
+    category, conf, probs = predict_category(query)
+    ^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 3)
+2026-02-04 14:39:18,633 | INFO | main | [a689e706] END bot=None latency=6ms error=too many values to unpack (expected 3)
+2026-02-04 14:40:37,346 | INFO | main | [c798b923] User Query: what is the college fees
+2026-02-04 14:40:37,348 | ERROR | main | [c798b923] ERROR while handling query: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "D:\college_chatbot\college_chatbot\main.py", line 53, in handle_query
+    category, conf, probs = predict_category(query)
+    ^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 3)
+2026-02-04 14:40:37,349 | INFO | main | [c798b923] END bot=None latency=3ms error=too many values to unpack (expected 3)
+2026-02-04 14:42:50,464 | INFO | main | [39d39e97] User Query: kill
+2026-02-04 14:42:50,465 | INFO | main | [39d39e97] Blocked by validation reason=' Please provide a little more detail (example: 'What is hostel fee?').'
+2026-02-04 14:42:50,467 | INFO | main | [39d39e97] END bot=None latency=2ms error=None
+2026-02-05 10:22:22,334 | INFO | bot3 | Building new FAISS index...
+2026-02-05 10:22:22,337 | INFO | bot3 | Loaded document: about.txt (5953 chars)
+2026-02-05 10:22:22,342 | INFO | bot3 | Loaded document: csd_professional_elective.txt (976 chars)
+2026-02-05 10:22:22,342 | INFO | bot3 | Loaded document: cse_ds_overview.txt (511 chars)
+2026-02-05 10:22:22,344 | INFO | bot3 | Loaded document: cse_ds_semesters.txt (1489 chars)
+2026-02-05 10:22:22,346 | INFO | bot3 | Loaded document: fee_structure.txt (2537 chars)
+2026-02-05 10:22:22,347 | INFO | bot3 | Loaded document: gentext.txt (5648 chars)
+2026-02-05 10:22:22,351 | INFO | bot3 | Loaded document: gentext1.txt (5648 chars)
+2026-02-05 10:22:22,352 | INFO | bot3 | Loaded document: p1.txt (2145 chars)
+2026-02-05 10:22:22,353 | INFO | bot3 | Loaded document: pg_academic_calendar_2025_26.txt (2745 chars)
+2026-02-05 10:22:22,354 | INFO | bot3 | Loaded document: programs.txt (2145 chars)
+2026-02-05 10:22:22,401 | INFO | bot3 | Loaded document: rvrjcce_about.txt (10866 chars)
+2026-02-05 10:22:22,447 | INFO | bot3 | Loaded document: rvrjcce_campus_student_services.txt (12094 chars)
+2026-02-05 10:22:22,493 | INFO | bot3 | Loaded document: rvrjcce_programs_admissions.txt (8521 chars)
+2026-02-05 10:22:22,497 | INFO | bot3 | Loaded document: scholarships.txt (1743 chars)
+2026-02-05 10:22:22,498 | INFO | bot3 | Loaded document: ug_academic_calendar_2025_26.txt (3317 chars)
+2026-02-05 10:22:22,504 | INFO | bot3 | Total documents loaded: 0
+2026-02-05 10:22:22,535 | INFO | bot3 | Loaded document: rvrjcce.ac.in_.txt (3290 chars)
+2026-02-05 10:22:22,568 | INFO | bot3 | Loaded document: rvrjcce.ac.in_contactus.php.txt (221 chars)
+2026-02-05 10:22:22,600 | INFO | bot3 | Loaded document: rvrjcce.ac.in_message.php.txt (219 chars)
+2026-02-05 10:22:22,635 | INFO | bot3 | Loaded document: rvrjcce.ac.in_principal.php.txt (221 chars)
+2026-02-05 10:22:22,637 | INFO | bot3 | Total documents loaded: 4
+2026-02-05 10:22:22,639 | INFO | bot3 | Total documents loaded: 19
+2026-02-05 10:58:38,789 | INFO | bot3 | Building new FAISS index...
+2026-02-05 10:58:38,790 | INFO | bot3 | Loaded document: about.txt (5953 chars)
+2026-02-05 10:58:38,796 | INFO | bot3 | Loaded document: csd_professional_elective.txt (976 chars)
+2026-02-05 10:58:38,798 | INFO | bot3 | Loaded document: cse_ds_overview.txt (511 chars)
+2026-02-05 10:58:38,798 | INFO | bot3 | Loaded document: cse_ds_semesters.txt (1489 chars)
+2026-02-05 10:58:38,800 | INFO | bot3 | Loaded document: fee_structure.txt (2537 chars)
+2026-02-05 10:58:38,801 | INFO | bot3 | Loaded document: gentext.txt (5648 chars)
+2026-02-05 10:58:38,805 | INFO | bot3 | Loaded document: gentext1.txt (5648 chars)
+2026-02-05 10:58:38,807 | INFO | bot3 | Loaded document: p1.txt (2145 chars)
+2026-02-05 10:58:38,810 | INFO | bot3 | Loaded document: pg_academic_calendar_2025_26.txt (2745 chars)
+2026-02-05 10:58:38,810 | INFO | bot3 | Loaded document: programs.txt (2145 chars)
+2026-02-05 10:58:38,812 | INFO | bot3 | Loaded document: rvrjcce_about.txt (10866 chars)
+2026-02-05 10:58:38,812 | INFO | bot3 | Loaded document: rvrjcce_campus_student_services.txt (12094 chars)
+2026-02-05 10:58:38,818 | INFO | bot3 | Loaded document: rvrjcce_programs_admissions.txt (8521 chars)
+2026-02-05 10:58:38,819 | INFO | bot3 | Loaded document: scholarships.txt (1743 chars)
+2026-02-05 10:58:38,821 | INFO | bot3 | Loaded document: ug_academic_calendar_2025_26.txt (3317 chars)
+2026-02-05 10:58:38,824 | INFO | bot3 | Total documents loaded: 0
+2026-02-05 10:58:38,828 | INFO | bot3 | Loaded document: rvrjcce.ac.in_.txt (3290 chars)
+2026-02-05 10:58:38,828 | INFO | bot3 | Loaded document: rvrjcce.ac.in_contactus.php.txt (221 chars)
+2026-02-05 10:58:38,830 | INFO | bot3 | Loaded document: rvrjcce.ac.in_message.php.txt (219 chars)
+2026-02-05 10:58:38,831 | INFO | bot3 | Loaded document: rvrjcce.ac.in_principal.php.txt (221 chars)
+2026-02-05 10:58:38,832 | INFO | bot3 | Total documents loaded: 4
+2026-02-05 10:58:38,832 | INFO | bot3 | Total documents loaded: 19
+2026-02-05 11:04:06,330 | INFO | bot3 | Building new FAISS index...
+2026-02-05 11:04:06,333 | INFO | bot3 | Loaded document: about.txt (5953 chars)
+2026-02-05 11:04:06,338 | INFO | bot3 | Loaded document: csd_professional_elective.txt (976 chars)
+2026-02-05 11:04:06,339 | INFO | bot3 | Loaded document: cse_ds_overview.txt (511 chars)
+2026-02-05 11:04:06,342 | INFO | bot3 | Loaded document: cse_ds_semesters.txt (1489 chars)
+2026-02-05 11:04:06,344 | INFO | bot3 | Loaded document: fee_structure.txt (2537 chars)
+2026-02-05 11:04:06,347 | INFO | bot3 | Loaded document: gentext.txt (5648 chars)
+2026-02-05 11:04:06,350 | INFO | bot3 | Loaded document: gentext1.txt (5648 chars)
+2026-02-05 11:04:06,352 | INFO | bot3 | Loaded document: p1.txt (2145 chars)
+2026-02-05 11:04:06,356 | INFO | bot3 | Loaded document: pg_academic_calendar_2025_26.txt (2745 chars)
+2026-02-05 11:04:06,362 | INFO | bot3 | Loaded document: programs.txt (2145 chars)
+2026-02-05 11:04:06,362 | INFO | bot3 | Loaded document: rvrjcce_about.txt (10866 chars)
+2026-02-05 11:04:06,367 | INFO | bot3 | Loaded document: rvrjcce_campus_student_services.txt (12094 chars)
+2026-02-05 11:04:06,368 | INFO | bot3 | Loaded document: rvrjcce_programs_admissions.txt (8521 chars)
+2026-02-05 11:04:06,368 | INFO | bot3 | Loaded document: scholarships.txt (1743 chars)
+2026-02-05 11:04:06,375 | INFO | bot3 | Loaded document: ug_academic_calendar_2025_26.txt (3317 chars)
+2026-02-05 11:04:06,382 | INFO | bot3 | Total documents loaded: 0
+2026-02-05 11:04:06,385 | INFO | bot3 | Loaded document: rvrjcce.ac.in_.txt (3290 chars)
+2026-02-05 11:04:06,388 | INFO | bot3 | Loaded document: rvrjcce.ac.in_contactus.php.txt (221 chars)
+2026-02-05 11:04:06,390 | INFO | bot3 | Loaded document: rvrjcce.ac.in_message.php.txt (219 chars)
+2026-02-05 11:04:06,393 | INFO | bot3 | Loaded document: rvrjcce.ac.in_principal.php.txt (221 chars)
+2026-02-05 11:04:06,396 | INFO | bot3 | Total documents loaded: 4
+2026-02-05 11:04:06,397 | INFO | bot3 | Total documents loaded: 19
+2026-02-05 11:18:14,094 | INFO | bot2 | [OK] Bot-2 FAISS index loaded: 280 QA pairs
+2026-02-05 11:18:18,383 | INFO | bot3 | [OK] Embedding model loaded: all-MiniLM-L6-v2
+2026-02-05 11:18:18,383 | INFO | bot3 | Building new FAISS index...
+2026-02-05 11:18:18,387 | INFO | bot3 | Loaded document: about.txt (5953 chars)
+2026-02-05 11:18:18,391 | INFO | bot3 | Loaded document: csd_professional_elective.txt (976 chars)
+2026-02-05 11:18:18,391 | INFO | bot3 | Loaded document: cse_ds_overview.txt (511 chars)
+2026-02-05 11:18:18,391 | INFO | bot3 | Loaded document: cse_ds_semesters.txt (1489 chars)
+2026-02-05 11:18:18,393 | INFO | bot3 | Loaded document: fee_structure.txt (2537 chars)
+2026-02-05 11:18:18,393 | INFO | bot3 | Loaded document: gentext.txt (5648 chars)
+2026-02-05 11:18:18,396 | INFO | bot3 | Loaded document: gentext1.txt (5648 chars)
+2026-02-05 11:18:18,396 | INFO | bot3 | Loaded document: p1.txt (2145 chars)
+2026-02-05 11:18:18,396 | INFO | bot3 | Loaded document: pg_academic_calendar_2025_26.txt (2745 chars)
+2026-02-05 11:18:18,397 | INFO | bot3 | Loaded document: programs.txt (2145 chars)
+2026-02-05 11:18:18,398 | INFO | bot3 | Loaded document: rvrjcce_about.txt (10866 chars)
+2026-02-05 11:18:18,399 | INFO | bot3 | Loaded document: rvrjcce_campus_student_services.txt (12094 chars)
+2026-02-05 11:18:18,400 | INFO | bot3 | Loaded document: rvrjcce_programs_admissions.txt (8521 chars)
+2026-02-05 11:18:18,400 | INFO | bot3 | Loaded document: scholarships.txt (1743 chars)
+2026-02-05 11:18:18,402 | INFO | bot3 | Loaded document: ug_academic_calendar_2025_26.txt (3317 chars)
+2026-02-05 11:18:18,404 | INFO | bot3 | Total documents loaded: 0
+2026-02-05 11:18:18,405 | INFO | bot3 | Loaded document: rvrjcce.ac.in_.txt (3290 chars)
+2026-02-05 11:18:18,407 | INFO | bot3 | Loaded document: rvrjcce.ac.in_contactus.php.txt (221 chars)
+2026-02-05 11:18:18,407 | INFO | bot3 | Loaded document: rvrjcce.ac.in_message.php.txt (219 chars)
+2026-02-05 11:18:18,407 | INFO | bot3 | Loaded document: rvrjcce.ac.in_principal.php.txt (221 chars)
+2026-02-05 11:18:18,409 | INFO | bot3 | Total documents loaded: 4
+2026-02-05 11:18:18,409 | INFO | bot3 | Total documents loaded: 19
+2026-02-05 11:26:50,285 | ERROR | bot3 | Error building index: 
+2026-02-05 19:50:06,549 | INFO | bot2 | [OK] Bot-2 FAISS index loaded: 280 QA pairs
+2026-02-05 19:50:10,540 | INFO | bot3 | [OK] Embedding model loaded: all-MiniLM-L6-v2
+2026-02-05 19:50:10,542 | INFO | bot3 | Building new FAISS index...
+2026-02-05 19:50:10,555 | INFO | bot3 | Loaded document: about.txt (5953 chars)
+2026-02-05 19:50:10,565 | INFO | bot3 | Loaded document: csd_professional_elective.txt (976 chars)
+2026-02-05 19:50:10,577 | INFO | bot3 | Loaded document: cse_ds_overview.txt (511 chars)
+2026-02-05 19:50:10,587 | INFO | bot3 | Loaded document: cse_ds_semesters.txt (1489 chars)
+2026-02-05 19:50:10,597 | INFO | bot3 | Loaded document: fee_structure.txt (2537 chars)
+2026-02-05 19:50:10,607 | INFO | bot3 | Loaded document: gentext.txt (5648 chars)
+2026-02-05 19:50:10,610 | INFO | bot3 | Loaded document: gentext1.txt (5648 chars)
+2026-02-05 19:50:10,618 | INFO | bot3 | Loaded document: p1.txt (2145 chars)
+2026-02-05 19:50:10,630 | INFO | bot3 | Loaded document: pg_academic_calendar_2025_26.txt (2745 chars)
+2026-02-05 19:50:10,631 | INFO | bot3 | Loaded document: programs.txt (2145 chars)
+2026-02-05 19:50:10,646 | INFO | bot3 | Loaded document: rvrjcce_about.txt (10866 chars)
+2026-02-05 19:50:10,660 | INFO | bot3 | Loaded document: rvrjcce_campus_student_services.txt (12094 chars)
+2026-02-05 19:50:10,671 | INFO | bot3 | Loaded document: rvrjcce_programs_admissions.txt (8521 chars)
+2026-02-05 19:50:10,688 | INFO | bot3 | Loaded document: scholarships.txt (1743 chars)
+2026-02-05 19:50:10,700 | INFO | bot3 | Loaded document: ug_academic_calendar_2025_26.txt (3317 chars)
+2026-02-05 19:50:10,702 | INFO | bot3 | Total documents loaded: 0
+2026-02-05 19:50:10,721 | INFO | bot3 | Loaded document: rvrjcce.ac.in_.txt (3290 chars)
+2026-02-05 19:50:10,735 | INFO | bot3 | Loaded document: rvrjcce.ac.in_contactus.php.txt (221 chars)
+2026-02-05 19:50:10,750 | INFO | bot3 | Loaded document: rvrjcce.ac.in_message.php.txt (219 chars)
+2026-02-05 19:50:10,762 | INFO | bot3 | Loaded document: rvrjcce.ac.in_principal.php.txt (221 chars)
+2026-02-05 19:50:10,764 | INFO | bot3 | Total documents loaded: 4
+2026-02-05 19:50:10,764 | INFO | bot3 | Total documents loaded: 19
+2026-02-05 19:52:08,758 | INFO | bot2 | [OK] Bot-2 FAISS index loaded: 280 QA pairs
+2026-02-05 19:52:12,696 | INFO | bot3 | [OK] Embedding model loaded: all-MiniLM-L6-v2
+2026-02-05 19:52:12,697 | INFO | bot3 | Building new FAISS index...
+2026-02-05 19:52:12,702 | INFO | bot3 | Loaded document: about.txt (5953 chars)
+2026-02-05 19:52:12,704 | INFO | bot3 | Loaded document: csd_professional_elective.txt (976 chars)
+2026-02-05 19:52:12,704 | INFO | bot3 | Loaded document: cse_ds_overview.txt (511 chars)
+2026-02-05 19:52:12,705 | INFO | bot3 | Loaded document: cse_ds_semesters.txt (1489 chars)
+2026-02-05 19:52:12,706 | INFO | bot3 | Loaded document: fee_structure.txt (2537 chars)
+2026-02-05 19:52:12,708 | INFO | bot3 | Loaded document: gentext.txt (5648 chars)
+2026-02-05 19:52:12,709 | INFO | bot3 | Loaded document: gentext1.txt (5648 chars)
+2026-02-05 19:52:12,709 | INFO | bot3 | Loaded document: p1.txt (2145 chars)
+2026-02-05 19:52:12,710 | INFO | bot3 | Loaded document: pg_academic_calendar_2025_26.txt (2745 chars)
+2026-02-05 19:52:12,711 | INFO | bot3 | Loaded document: programs.txt (2145 chars)
+2026-02-05 19:52:12,712 | INFO | bot3 | Loaded document: rvrjcce_about.txt (10866 chars)
+2026-02-05 19:52:12,712 | INFO | bot3 | Loaded document: rvrjcce_campus_student_services.txt (12094 chars)
+2026-02-05 19:52:12,714 | INFO | bot3 | Loaded document: rvrjcce_programs_admissions.txt (8521 chars)
+2026-02-05 19:52:12,715 | INFO | bot3 | Loaded document: scholarships.txt (1743 chars)
+2026-02-05 19:52:12,716 | INFO | bot3 | Loaded document: ug_academic_calendar_2025_26.txt (3317 chars)
+2026-02-05 19:52:12,720 | INFO | bot3 | Total documents loaded: 0
+2026-02-05 19:52:12,722 | INFO | bot3 | Loaded document: rvrjcce.ac.in_.txt (3290 chars)
+2026-02-05 19:52:12,723 | INFO | bot3 | Loaded document: rvrjcce.ac.in_contactus.php.txt (221 chars)
+2026-02-05 19:52:12,723 | INFO | bot3 | Loaded document: rvrjcce.ac.in_message.php.txt (219 chars)
+2026-02-05 19:52:12,724 | INFO | bot3 | Loaded document: rvrjcce.ac.in_principal.php.txt (221 chars)
+2026-02-05 19:52:12,725 | INFO | bot3 | Total documents loaded: 4
+2026-02-05 19:52:12,725 | INFO | bot3 | Total documents loaded: 19
+2026-02-05 19:52:45,901 | ERROR | bot3 | Error building index: 
+2026-02-05 19:53:28,997 | INFO | orchestrator | [6135178f] ======================================================================
+2026-02-05 19:53:28,998 | INFO | orchestrator | [6135178f] QUERY: where is the college
+2026-02-05 19:53:29,000 | INFO | orchestrator | [6135178f] History length: 0
+2026-02-05 19:53:29,000 | INFO | orchestrator | [6135178f] [STAGE 1] Query Validation
+2026-02-05 19:53:29,004 | INFO | orchestrator | [6135178f] [OK] Query validation passed
+2026-02-05 19:53:29,006 | INFO | orchestrator | [6135178f] [STAGE 2] Scope Check
+2026-02-05 19:53:29,008 | INFO | orchestrator | [6135178f] [OK] Query in scope: neutral_allow
+2026-02-05 19:53:29,009 | INFO | orchestrator | [6135178f] [STAGE 3] Intent Classification
+2026-02-05 19:53:29,022 | INFO | orchestrator | [6135178f] Classification: category=General Information, confidence=0.4196
+2026-02-05 19:53:29,023 | INFO | orchestrator | [6135178f] [STAGE 4] Routing Decision
+2026-02-05 19:53:29,024 | INFO | orchestrator | [6135178f] Confidence thresholds: HIGH=0.75, MID=0.45
+2026-02-05 19:53:29,025 | INFO | orchestrator | [6135178f] [ROUTING] LOW CONFIDENCE ROUTING: Low classifier confidence (0.4196 < 0.45)
+2026-02-05 19:53:29,026 | INFO | orchestrator | [6135178f] [STAGE 5] Answer Generation via BOT-3
+2026-02-05 19:53:29,026 | INFO | orchestrator | [6135178f] Calling BOT-3 (RAG)
+2026-02-05 19:53:29,027 | INFO | bot3 | [6135178f] Bot-3 (RAG) activated
+2026-02-05 19:53:29,027 | WARNING | bot3 | [6135178f] FAISS index not available
+2026-02-05 19:53:29,027 | INFO | bot3 | [6135178f] No documents retrieved from FAISS
+2026-02-05 19:53:29,029 | INFO | orchestrator | [6135178f] [OK] BOT-3 returned answer
+2026-02-05 19:53:29,030 | INFO | orchestrator | [6135178f] Response generated (230 chars)
+2026-02-05 19:53:29,031 | INFO | orchestrator | [6135178f] ======================================================================
+2026-02-05 19:53:29,032 | INFO | orchestrator | [6135178f] SUMMARY: bot=BOT-3 | conf=0.7000 | latency=33ms | error=None
+2026-02-05 19:53:29,032 | INFO | orchestrator | [6135178f] ======================================================================
+2026-02-05 20:00:26,447 | INFO | orchestrator | [a6649a55] ======================================================================
+2026-02-05 20:00:26,453 | INFO | orchestrator | [a6649a55] QUERY: where is the college
+2026-02-05 20:00:26,454 | INFO | orchestrator | [a6649a55] History length: 1
+2026-02-05 20:00:26,454 | INFO | orchestrator | [a6649a55] [STAGE 1] Query Validation
+2026-02-05 20:00:26,465 | INFO | orchestrator | [a6649a55] [OK] Query validation passed
+2026-02-05 20:00:26,471 | INFO | orchestrator | [a6649a55] [STAGE 2] Scope Check
+2026-02-05 20:00:26,479 | INFO | orchestrator | [a6649a55] [OK] Query in scope: neutral_allow
+2026-02-05 20:00:26,480 | INFO | orchestrator | [a6649a55] [STAGE 3] Intent Classification
+2026-02-05 20:00:26,565 | INFO | orchestrator | [a6649a55] Classification: category=General Information, confidence=0.4196
+2026-02-05 20:00:26,566 | INFO | orchestrator | [a6649a55] [STAGE 4] Routing Decision
+2026-02-05 20:00:26,567 | INFO | orchestrator | [a6649a55] Confidence thresholds: HIGH=0.75, MID=0.45
+2026-02-05 20:00:26,568 | INFO | orchestrator | [a6649a55] [ROUTING] LOW CONFIDENCE ROUTING: Low classifier confidence (0.4196 < 0.45)
+2026-02-05 20:00:26,568 | INFO | orchestrator | [a6649a55] [STAGE 5] Answer Generation via BOT-3
+2026-02-05 20:00:26,569 | INFO | orchestrator | [a6649a55] Calling BOT-3 (RAG)
+2026-02-05 20:00:26,571 | INFO | bot3 | [a6649a55] Bot-3 (RAG) activated
+2026-02-05 20:00:26,574 | WARNING | bot3 | [a6649a55] FAISS index not available
+2026-02-05 20:00:26,576 | INFO | bot3 | [a6649a55] No documents retrieved from FAISS
+2026-02-05 20:00:26,584 | INFO | orchestrator | [a6649a55] [OK] BOT-3 returned answer
+2026-02-05 20:00:26,588 | INFO | orchestrator | [a6649a55] Response generated (230 chars)
+2026-02-05 20:00:26,591 | INFO | orchestrator | [a6649a55] ======================================================================
+2026-02-05 20:00:26,592 | INFO | orchestrator | [a6649a55] SUMMARY: bot=BOT-3 | conf=0.7000 | latency=144ms | error=None
+2026-02-05 20:00:26,592 | INFO | orchestrator | [a6649a55] ======================================================================
+2026-02-05 20:05:34,547 | ERROR | bot3 | Error building index: 
+2026-02-06 11:01:55,259 | INFO | bot2 | [OK] Bot-2 FAISS index loaded: 280 QA pairs
+2026-02-06 11:01:58,671 | INFO | bot3 | [OK] Embedding model loaded: all-MiniLM-L6-v2
+2026-02-06 11:01:58,671 | INFO | bot3 | Building new FAISS index...
+2026-02-06 11:01:58,675 | INFO | bot3 | Loaded document: about.txt (5953 chars)
+2026-02-06 11:01:58,677 | INFO | bot3 | Loaded document: csd_professional_elective.txt (976 chars)
+2026-02-06 11:01:58,677 | INFO | bot3 | Loaded document: cse_ds_overview.txt (511 chars)
+2026-02-06 11:01:58,678 | INFO | bot3 | Loaded document: cse_ds_semesters.txt (1489 chars)
+2026-02-06 11:01:58,678 | INFO | bot3 | Loaded document: fee_structure.txt (2537 chars)
+2026-02-06 11:01:58,679 | INFO | bot3 | Loaded document: gentext.txt (5648 chars)
+2026-02-06 11:01:58,680 | INFO | bot3 | Loaded document: gentext1.txt (5648 chars)
+2026-02-06 11:01:58,681 | INFO | bot3 | Loaded document: p1.txt (2145 chars)
+2026-02-06 11:01:58,682 | INFO | bot3 | Loaded document: pg_academic_calendar_2025_26.txt (2745 chars)
+2026-02-06 11:01:58,683 | INFO | bot3 | Loaded document: programs.txt (2145 chars)
+2026-02-06 11:01:58,683 | INFO | bot3 | Loaded document: rvrjcce_about.txt (10866 chars)
+2026-02-06 11:01:58,684 | INFO | bot3 | Loaded document: rvrjcce_campus_student_services.txt (12094 chars)
+2026-02-06 11:01:58,685 | INFO | bot3 | Loaded document: rvrjcce_programs_admissions.txt (8521 chars)
+2026-02-06 11:01:58,685 | INFO | bot3 | Loaded document: scholarships.txt (1743 chars)
+2026-02-06 11:01:58,686 | INFO | bot3 | Loaded document: ug_academic_calendar_2025_26.txt (3317 chars)
+2026-02-06 11:01:58,686 | INFO | bot3 | Total documents loaded: 0
+2026-02-06 11:01:58,687 | INFO | bot3 | Loaded document: rvrjcce.ac.in_.txt (3290 chars)
+2026-02-06 11:01:58,688 | INFO | bot3 | Loaded document: rvrjcce.ac.in_contactus.php.txt (221 chars)
+2026-02-06 11:01:58,688 | INFO | bot3 | Loaded document: rvrjcce.ac.in_message.php.txt (219 chars)
+2026-02-06 11:01:58,689 | INFO | bot3 | Loaded document: rvrjcce.ac.in_principal.php.txt (221 chars)
+2026-02-06 11:01:58,689 | INFO | bot3 | Total documents loaded: 4
+2026-02-06 11:01:58,689 | INFO | bot3 | Total documents loaded: 19
+2026-02-06 12:17:30,511 | INFO | bot2 | [OK] Bot-2 FAISS index loaded: 280 QA pairs
+2026-02-06 12:17:35,867 | INFO | bot3 | [OK] Embedding model loaded: all-MiniLM-L6-v2
+2026-02-06 12:17:35,868 | INFO | bot3 | Building new FAISS index...
+2026-02-06 12:17:35,869 | INFO | bot3 | Loaded document: about.txt (5953 chars)
+2026-02-06 12:17:35,871 | INFO | bot3 | Loaded document: csd_professional_elective.txt (976 chars)
+2026-02-06 12:17:35,871 | INFO | bot3 | Loaded document: cse_ds_overview.txt (511 chars)
+2026-02-06 12:17:35,871 | INFO | bot3 | Loaded document: cse_ds_semesters.txt (1489 chars)
+2026-02-06 12:17:35,875 | INFO | bot3 | Loaded document: fee_structure.txt (2537 chars)
+2026-02-06 12:17:35,877 | INFO | bot3 | Loaded document: gentext.txt (5648 chars)
+2026-02-06 12:17:35,878 | INFO | bot3 | Loaded document: gentext1.txt (5648 chars)
+2026-02-06 12:17:35,878 | INFO | bot3 | Loaded document: p1.txt (2145 chars)
+2026-02-06 12:17:35,880 | INFO | bot3 | Loaded document: pg_academic_calendar_2025_26.txt (2745 chars)
+2026-02-06 12:17:35,881 | INFO | bot3 | Loaded document: programs.txt (2145 chars)
+2026-02-06 12:17:35,882 | INFO | bot3 | Loaded document: rvrjcce_about.txt (10866 chars)
+2026-02-06 12:17:35,882 | INFO | bot3 | Loaded document: rvrjcce_campus_student_services.txt (12094 chars)
+2026-02-06 12:17:35,883 | INFO | bot3 | Loaded document: rvrjcce_programs_admissions.txt (8521 chars)
+2026-02-06 12:17:35,884 | INFO | bot3 | Loaded document: scholarships.txt (1743 chars)
+2026-02-06 12:17:35,885 | INFO | bot3 | Loaded document: ug_academic_calendar_2025_26.txt (3317 chars)
+2026-02-06 12:17:35,887 | INFO | bot3 | Total documents loaded: 0
+2026-02-06 12:17:35,887 | INFO | bot3 | Loaded document: rvrjcce.ac.in_.txt (3290 chars)
+2026-02-06 12:17:35,887 | INFO | bot3 | Loaded document: rvrjcce.ac.in_contactus.php.txt (221 chars)
+2026-02-06 12:17:35,887 | INFO | bot3 | Loaded document: rvrjcce.ac.in_message.php.txt (219 chars)
+2026-02-06 12:17:35,887 | INFO | bot3 | Loaded document: rvrjcce.ac.in_principal.php.txt (221 chars)
+2026-02-06 12:17:35,887 | INFO | bot3 | Total documents loaded: 4
+2026-02-06 12:17:35,887 | INFO | bot3 | Total documents loaded: 19
+2026-02-06 12:23:09,076 | ERROR | bot3 | Error building index: 
+2026-02-06 12:29:51,414 | INFO | orchestrator | [10453916] ======================================================================
+2026-02-06 12:29:51,416 | INFO | orchestrator | [10453916] QUERY: hello
+2026-02-06 12:29:51,417 | INFO | orchestrator | [10453916] History length: 0
+2026-02-06 12:29:51,418 | INFO | orchestrator | [10453916] [STAGE 1] Query Validation
+2026-02-06 12:29:51,423 | INFO | orchestrator | [10453916] [FAIL] Query failed validation: Please provide more detail. Example: 'What is the hostel fee?'
+2026-02-06 12:29:51,428 | INFO | orchestrator | [10453916] ======================================================================
+2026-02-06 12:29:51,430 | INFO | orchestrator | [10453916] SUMMARY: bot=UNKNOWN | conf=0.0000 | latency=12ms | error=None
+2026-02-06 12:29:51,430 | INFO | orchestrator | [10453916] ======================================================================
+2026-02-06 12:29:57,694 | INFO | orchestrator | [23eed0ab] ======================================================================
+2026-02-06 12:29:57,696 | INFO | orchestrator | [23eed0ab] QUERY: how are you doing?
+2026-02-06 12:29:57,696 | INFO | orchestrator | [23eed0ab] History length: 1
+2026-02-06 12:29:57,699 | INFO | orchestrator | [23eed0ab] [STAGE 1] Query Validation
+2026-02-06 12:29:57,700 | INFO | orchestrator | [23eed0ab] [OK] Query validation passed
+2026-02-06 12:29:57,700 | INFO | orchestrator | [23eed0ab] [STAGE 2] Scope Check
+2026-02-06 12:29:57,703 | INFO | orchestrator | [23eed0ab] [OK] Query in scope: neutral_allow
+2026-02-06 12:29:57,703 | INFO | orchestrator | [23eed0ab] [STAGE 3] Intent Classification
+2026-02-06 12:29:57,720 | INFO | orchestrator | [23eed0ab] Classification: category=General Information, confidence=0.1995
+2026-02-06 12:29:57,720 | INFO | orchestrator | [23eed0ab] [STAGE 4] Routing Decision
+2026-02-06 12:29:57,720 | INFO | orchestrator | [23eed0ab] Confidence thresholds: HIGH=0.75, MID=0.45
+2026-02-06 12:29:57,720 | INFO | orchestrator | [23eed0ab] [ROUTING] LOW CONFIDENCE ROUTING: Low classifier confidence (0.1995 < 0.45)
+2026-02-06 12:29:57,720 | INFO | orchestrator | [23eed0ab] [STAGE 5] Answer Generation via BOT-3
+2026-02-06 12:29:57,725 | INFO | orchestrator | [23eed0ab] Calling BOT-3 (RAG)
+2026-02-06 12:29:57,725 | INFO | bot3 | [23eed0ab] Bot-3 (RAG) activated
+2026-02-06 12:29:57,725 | WARNING | bot3 | [23eed0ab] FAISS index not available
+2026-02-06 12:29:57,728 | INFO | bot3 | [23eed0ab] No documents retrieved from FAISS
+2026-02-06 12:29:57,730 | INFO | orchestrator | [23eed0ab] [OK] BOT-3 returned answer
+2026-02-06 12:29:57,732 | INFO | orchestrator | [23eed0ab] Response generated (230 chars)
+2026-02-06 12:29:57,732 | INFO | orchestrator | [23eed0ab] ======================================================================
+2026-02-06 12:29:57,732 | INFO | orchestrator | [23eed0ab] SUMMARY: bot=BOT-3 | conf=0.7000 | latency=37ms | error=None
+2026-02-06 12:29:57,732 | INFO | orchestrator | [23eed0ab] ======================================================================
+2026-02-06 12:30:11,681 | INFO | orchestrator | [55271a6d] ======================================================================
+2026-02-06 12:30:11,681 | INFO | orchestrator | [55271a6d] QUERY: who the fuck are you?
+2026-02-06 12:30:11,681 | INFO | orchestrator | [55271a6d] History length: 2
+2026-02-06 12:30:11,682 | INFO | orchestrator | [55271a6d] [STAGE 1] Query Validation
+2026-02-06 12:30:11,683 | INFO | orchestrator | [55271a6d] [FAIL] Query failed validation: Please use respectful language. This assistant is here to help you.
+2026-02-06 12:30:11,686 | INFO | orchestrator | [55271a6d] ======================================================================
+2026-02-06 12:30:11,686 | INFO | orchestrator | [55271a6d] SUMMARY: bot=UNKNOWN | conf=0.0000 | latency=4ms | error=None
+2026-02-06 12:30:11,687 | INFO | orchestrator | [55271a6d] ======================================================================
+2026-02-06 12:30:23,723 | INFO | orchestrator | [fdfa43fd] ======================================================================
+2026-02-06 12:30:23,723 | INFO | orchestrator | [fdfa43fd] QUERY: i dont need your he
+2026-02-06 12:30:23,724 | INFO | orchestrator | [fdfa43fd] History length: 3
+2026-02-06 12:30:23,724 | INFO | orchestrator | [fdfa43fd] [STAGE 1] Query Validation
+2026-02-06 12:30:23,725 | INFO | orchestrator | [fdfa43fd] [OK] Query validation passed
+2026-02-06 12:30:23,725 | INFO | orchestrator | [fdfa43fd] [STAGE 2] Scope Check
+2026-02-06 12:30:23,726 | INFO | orchestrator | [fdfa43fd] [OK] Query in scope: neutral_allow
+2026-02-06 12:30:23,726 | INFO | orchestrator | [fdfa43fd] [STAGE 3] Intent Classification
+2026-02-06 12:30:23,729 | INFO | orchestrator | [fdfa43fd] Classification: category=Cross-domain Queries, confidence=0.1801
+2026-02-06 12:30:23,731 | INFO | orchestrator | [fdfa43fd] [STAGE 4] Routing Decision
+2026-02-06 12:30:23,731 | INFO | orchestrator | [fdfa43fd] Confidence thresholds: HIGH=0.75, MID=0.45
+2026-02-06 12:30:23,732 | INFO | orchestrator | [fdfa43fd] [ROUTING] LOW CONFIDENCE ROUTING: Low classifier confidence (0.1801 < 0.45)
+2026-02-06 12:30:23,732 | INFO | orchestrator | [fdfa43fd] [STAGE 5] Answer Generation via BOT-3
+2026-02-06 12:30:23,733 | INFO | orchestrator | [fdfa43fd] Calling BOT-3 (RAG)
+2026-02-06 12:30:23,733 | INFO | bot3 | [fdfa43fd] Bot-3 (RAG) activated
+2026-02-06 12:30:23,734 | WARNING | bot3 | [fdfa43fd] FAISS index not available
+2026-02-06 12:30:23,734 | INFO | bot3 | [fdfa43fd] No documents retrieved from FAISS
+2026-02-06 12:30:23,735 | INFO | orchestrator | [fdfa43fd] [OK] BOT-3 returned answer
+2026-02-06 12:30:23,736 | INFO | orchestrator | [fdfa43fd] Response generated (230 chars)
+2026-02-06 12:30:23,737 | INFO | orchestrator | [fdfa43fd] ======================================================================
+2026-02-06 12:30:23,738 | INFO | orchestrator | [fdfa43fd] SUMMARY: bot=BOT-3 | conf=0.7000 | latency=13ms | error=None
+2026-02-06 12:30:23,738 | INFO | orchestrator | [fdfa43fd] ======================================================================
+2026-02-06 12:31:22,316 | INFO | orchestrator | [04a5a576] ======================================================================
+2026-02-06 12:31:22,317 | INFO | orchestrator | [04a5a576] QUERY: i am from a obc baclground, how much do i need to pay for my BTECH in civil engg.
+2026-02-06 12:31:22,317 | INFO | orchestrator | [04a5a576] History length: 4
+2026-02-06 12:31:22,319 | INFO | orchestrator | [04a5a576] [STAGE 1] Query Validation
+2026-02-06 12:31:22,319 | INFO | orchestrator | [04a5a576] [OK] Query validation passed
+2026-02-06 12:31:22,319 | INFO | orchestrator | [04a5a576] [STAGE 2] Scope Check
+2026-02-06 12:31:22,323 | INFO | orchestrator | [04a5a576] [OK] Query in scope: neutral_allow
+2026-02-06 12:31:22,323 | INFO | orchestrator | [04a5a576] [STAGE 3] Intent Classification
+2026-02-06 12:31:22,331 | INFO | orchestrator | [04a5a576] Classification: category=Financial Matters, confidence=0.7082
+2026-02-06 12:31:22,332 | INFO | orchestrator | [04a5a576] [STAGE 4] Routing Decision
+2026-02-06 12:31:22,332 | INFO | orchestrator | [04a5a576] Confidence thresholds: HIGH=0.75, MID=0.45
+2026-02-06 12:31:22,334 | INFO | orchestrator | [04a5a576] [ROUTING] RULE-BOT (with RAG fallback): Medium confidence (0.7082) + rule category
+2026-02-06 12:31:22,334 | INFO | orchestrator | [04a5a576] [STAGE 5] Answer Generation via BOT-1-WITH-FALLBACK
+2026-02-06 12:31:22,335 | INFO | orchestrator | [04a5a576] Calling BOT-1 (Rule-based)
+2026-02-06 12:31:22,342 | INFO | orchestrator | [04a5a576] [OK] BOT-1 returned answer
+2026-02-06 12:31:22,344 | INFO | orchestrator | [04a5a576] Response generated (240 chars)
+2026-02-06 12:31:22,349 | INFO | orchestrator | [04a5a576] ======================================================================
+2026-02-06 12:31:22,349 | INFO | orchestrator | [04a5a576] SUMMARY: bot=BOT-1 | conf=0.9000 | latency=31ms | error=None
+2026-02-06 12:31:22,349 | INFO | orchestrator | [04a5a576] ======================================================================
+2026-02-06 13:20:52,971 | INFO | bot2 | [OK] Bot-2 FAISS index loaded: 280 QA pairs
+2026-02-06 13:20:57,996 | INFO | bot3 | [OK] Embedding model loaded: all-MiniLM-L6-v2
+2026-02-06 13:20:58,002 | INFO | bot3 | Building new FAISS index...
+2026-02-06 13:20:58,009 | INFO | bot3 | Loaded document: about.txt (5953 chars)
+2026-02-06 13:20:58,028 | INFO | bot3 | Loaded document: csd_professional_elective.txt (976 chars)
+2026-02-06 13:20:58,051 | INFO | bot3 | Loaded document: cse_ds_overview.txt (511 chars)
+2026-02-06 13:20:58,067 | INFO | bot3 | Loaded document: cse_ds_semesters.txt (1489 chars)
+2026-02-06 13:20:58,082 | INFO | bot3 | Loaded document: fee_structure.txt (2537 chars)
+2026-02-06 13:20:58,142 | INFO | bot3 | Loaded document: gentext.txt (5648 chars)
+2026-02-06 13:20:58,179 | INFO | bot3 | Loaded document: gentext1.txt (5648 chars)
+2026-02-06 13:20:58,185 | INFO | bot3 | Loaded document: p1.txt (2145 chars)
+2026-02-06 13:20:58,208 | INFO | bot3 | Loaded document: pg_academic_calendar_2025_26.txt (2745 chars)
+2026-02-06 13:20:58,233 | INFO | bot3 | Loaded document: programs.txt (2145 chars)
+2026-02-06 13:20:58,255 | INFO | bot3 | Loaded document: rvrjcce_about.txt (10866 chars)
+2026-02-06 13:20:58,273 | INFO | bot3 | Loaded document: rvrjcce_campus_student_services.txt (12094 chars)
+2026-02-06 13:20:58,293 | INFO | bot3 | Loaded document: rvrjcce_programs_admissions.txt (8521 chars)
+2026-02-06 13:20:58,297 | INFO | bot3 | Loaded document: scholarships.txt (1743 chars)
+2026-02-06 13:20:58,304 | INFO | bot3 | Loaded document: ug_academic_calendar_2025_26.txt (3317 chars)
+2026-02-06 13:20:58,307 | INFO | bot3 | Total documents loaded: 0
+2026-02-06 13:20:58,314 | INFO | bot3 | Loaded document: rvrjcce.ac.in_.txt (3290 chars)
+2026-02-06 13:20:58,316 | INFO | bot3 | Loaded document: rvrjcce.ac.in_contactus.php.txt (221 chars)
+2026-02-06 13:20:58,321 | INFO | bot3 | Loaded document: rvrjcce.ac.in_message.php.txt (219 chars)
+2026-02-06 13:20:58,323 | INFO | bot3 | Loaded document: rvrjcce.ac.in_principal.php.txt (221 chars)
+2026-02-06 13:20:58,325 | INFO | bot3 | Total documents loaded: 4
+2026-02-06 13:20:58,332 | INFO | bot3 | Total documents loaded: 19
+2026-02-06 13:24:50,769 | ERROR | bot3 | Error building index: 
+2026-02-06 13:25:37,961 | INFO | orchestrator | [190d92e4] ======================================================================
+2026-02-06 13:25:37,965 | INFO | orchestrator | [190d92e4] QUERY: hello
+2026-02-06 13:25:37,965 | INFO | orchestrator | [190d92e4] History length: 0
+2026-02-06 13:25:37,965 | INFO | orchestrator | [190d92e4] [STAGE 1] Query Validation
+2026-02-06 13:25:37,981 | INFO | orchestrator | [190d92e4] [FAIL] Query failed validation: Please provide more detail. Example: 'What is the hostel fee?'
+2026-02-06 13:25:37,989 | INFO | orchestrator | [190d92e4] ======================================================================
+2026-02-06 13:25:37,991 | INFO | orchestrator | [190d92e4] SUMMARY: bot=UNKNOWN | conf=0.0000 | latency=22ms | error=None
+2026-02-06 13:25:37,994 | INFO | orchestrator | [190d92e4] ======================================================================
+2026-02-06 13:25:47,606 | INFO | orchestrator | [8b57af6f] ======================================================================
+2026-02-06 13:25:47,608 | INFO | orchestrator | [8b57af6f] QUERY: what is college fee
+2026-02-06 13:25:47,608 | INFO | orchestrator | [8b57af6f] History length: 1
+2026-02-06 13:25:47,613 | INFO | orchestrator | [8b57af6f] [STAGE 1] Query Validation
+2026-02-06 13:25:47,614 | INFO | orchestrator | [8b57af6f] [OK] Query validation passed
+2026-02-06 13:25:47,616 | INFO | orchestrator | [8b57af6f] [STAGE 2] Scope Check
+2026-02-06 13:25:47,618 | INFO | orchestrator | [8b57af6f] [OK] Query in scope: college_scope
+2026-02-06 13:25:47,622 | INFO | orchestrator | [8b57af6f] [STAGE 3] Intent Classification
+2026-02-06 13:25:47,671 | INFO | orchestrator | [8b57af6f] Classification: category=Financial Matters, confidence=0.5450
+2026-02-06 13:25:47,677 | INFO | orchestrator | [8b57af6f] [STAGE 4] Routing Decision
+2026-02-06 13:25:47,684 | INFO | orchestrator | [8b57af6f] Confidence thresholds: HIGH=0.75, MID=0.45
+2026-02-06 13:25:47,685 | INFO | orchestrator | [8b57af6f] [ROUTING] RULE-BOT (with RAG fallback): Medium confidence (0.5450) + rule category
+2026-02-06 13:25:47,685 | INFO | orchestrator | [8b57af6f] [STAGE 5] Answer Generation via BOT-1-WITH-FALLBACK
+2026-02-06 13:25:47,685 | INFO | orchestrator | [8b57af6f] Calling BOT-1 (Rule-based)
+2026-02-06 13:25:47,697 | INFO | orchestrator | [8b57af6f] [OK] BOT-1 returned answer
+2026-02-06 13:25:47,711 | INFO | orchestrator | [8b57af6f] Response generated (240 chars)
+2026-02-06 13:25:47,720 | INFO | orchestrator | [8b57af6f] ======================================================================
+2026-02-06 13:25:47,720 | INFO | orchestrator | [8b57af6f] SUMMARY: bot=BOT-1 | conf=0.9000 | latency=112ms | error=None
+2026-02-06 13:25:47,730 | INFO | orchestrator | [8b57af6f] ======================================================================
+2026-02-06 13:25:58,576 | INFO | orchestrator | [b886298e] ======================================================================
+2026-02-06 13:25:58,579 | INFO | orchestrator | [b886298e] QUERY: where is the college
+2026-02-06 13:25:58,580 | INFO | orchestrator | [b886298e] History length: 2
+2026-02-06 13:25:58,581 | INFO | orchestrator | [b886298e] [STAGE 1] Query Validation
+2026-02-06 13:25:58,581 | INFO | orchestrator | [b886298e] [OK] Query validation passed
+2026-02-06 13:25:58,581 | INFO | orchestrator | [b886298e] [STAGE 2] Scope Check
+2026-02-06 13:25:58,588 | INFO | orchestrator | [b886298e] [OK] Query in scope: neutral_allow
+2026-02-06 13:25:58,588 | INFO | orchestrator | [b886298e] [STAGE 3] Intent Classification
+2026-02-06 13:25:58,610 | INFO | orchestrator | [b886298e] Classification: category=General Information, confidence=0.4196
+2026-02-06 13:25:58,610 | INFO | orchestrator | [b886298e] [STAGE 4] Routing Decision
+2026-02-06 13:25:58,610 | INFO | orchestrator | [b886298e] Confidence thresholds: HIGH=0.75, MID=0.45
+2026-02-06 13:25:58,619 | INFO | orchestrator | [b886298e] [ROUTING] LOW CONFIDENCE ROUTING: Low classifier confidence (0.4196 < 0.45)
+2026-02-06 13:25:58,619 | INFO | orchestrator | [b886298e] [STAGE 5] Answer Generation via BOT-3
+2026-02-06 13:25:58,619 | INFO | orchestrator | [b886298e] Calling BOT-3 (RAG)
+2026-02-06 13:25:58,619 | INFO | bot3 | [b886298e] Bot-3 (RAG) activated
+2026-02-06 13:25:58,629 | WARNING | bot3 | [b886298e] FAISS index not available
+2026-02-06 13:25:58,629 | INFO | bot3 | [b886298e] No documents retrieved from FAISS
+2026-02-06 13:25:58,629 | INFO | orchestrator | [b886298e] [OK] BOT-3 returned answer
+2026-02-06 13:25:58,636 | INFO | orchestrator | [b886298e] Response generated (230 chars)
+2026-02-06 13:25:58,640 | INFO | orchestrator | [b886298e] ======================================================================
+2026-02-06 13:25:58,642 | INFO | orchestrator | [b886298e] SUMMARY: bot=BOT-3 | conf=0.7000 | latency=62ms | error=None
+2026-02-06 13:25:58,644 | INFO | orchestrator | [b886298e] ======================================================================

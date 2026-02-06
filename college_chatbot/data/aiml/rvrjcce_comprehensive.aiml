@@ -1,0 +1,463 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+    <!-- ================= RVR JYOTHI RAI COLLEGE DATA ================= -->
+    
+    <!-- ================= COLLEGE INFORMATION ================= -->
+    
+    <category>
+        <pattern>* ABOUT * RVR *</pattern>
+        <template>
+            R.V.R. &amp; J.C. College of Engineering is a leading engineering institution in Guntur, Andhra Pradesh.
+            The college offers UG and PG programs with a focus on academic innovation and engineering excellence.
+            We are AICTE approved and NAAC accredited with autonomous status.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* COLLEGE * ADDRESS *</pattern>
+        <template>
+            Main Campus: R.V.R. &amp;
+ J.C. College of Engineering, Chandramoulipuram, Chowdavaram, Guntur-522 019, Andhra Pradesh.
+            City Office: SVN Colony, Opposite Chinmaya Vidyalaya, Guntur-522 006.
+            Phone: 94910 73317, 94910 73318
+        </template>
+    </category>
+
+    <category>
+        <pattern>* COLLEGE * CONTACT *</pattern>
+        <template>
+            General Contact: 94910 73317, 94910 73318
+            Admissions: 94910 73318
+            City Centre: 0863-2232505
+            For other queries, contact the respective department directly.
+        </template>
+    </category>
+
+    <!-- ================= ADMISSION PROCESS ================= -->
+
+    <category>
+        <pattern>* ADMISSION * RVRJCCE *</pattern>
+        <template>
+            RVRJCCE conducts admissions through EAPCET counselling (70% of seats) and Management quota (30% of seats).
+            Minimum qualification: 10+2 with Physics, Mathematics, Chemistry (MPC).
+            10% Lateral Entry seats available in the second year via ECET.
+            All admissions are ratified by the Government of Andhra Pradesh.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ADMISSION * ELIGIBILITY *</pattern>
+        <template>
+            Eligibility for B.Tech: Completed 10+2 with MPC or equivalent.
+            EAPCET counselling rank is required for 70% of seats.
+            Lateral entry (2nd year) requires ECET rank.
+            Statutory reservations as per government norms are followed.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* LATERAL * ENTRY *</pattern>
+        <template>
+            10% Lateral Entry seats are available in the second year B.Tech.
+            Candidates must have completed Diploma in Engineering from any recognized polytechnic.
+            ECET (Engineering Common Entrance Test) rank is required for lateral entry admissions.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* EAPCET *</pattern>
+        <template>
+            EAPCET (Engineering Agricultural and Medical Common Entrance Test) is the entrance exam for engineering admissions in Andhra Pradesh.
+            RVRJCCE conducts 70% of admissions on EAPCET rank basis.
+            For more information, visit the EAPCET official website or contact our admissions office.
+        </template>
+    </category>
+
+    <!-- ================= UNDERGRADUATE PROGRAMS ================= -->
+
+    <category>
+        <pattern>* UG * PROGRAMS *</pattern>
+        <template>
+            RVRJCCE offers 10 B.Tech programs and 1 B.B.A. program.
+            B.Tech Programs: Civil, Mechanical, ECE, CSE, EEE, Chemical, IT, CSBS, CSE-AI/ML, CSE-DataScience, CSE-IoT.
+            Total UG Intake: 1,680 seats.
+            Contact admissions at 94910 73318 for more details.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CSE * PROGRAM *</pattern>
+        <template>
+            Computer Science &amp; Engineering (CSE) is the flagship program with specialized tracks:
+            - CSE: 360 seats
+            - CSE AI &amp; ML: 180 seats
+            - CSE Data Science: 180 seats
+            - CSE IoT: 60 seats
+            - Computer Science &amp; Business Systems: 60 seats
+            Total CSE Family: 840 seats
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ENGINEERING * PROGRAMS * OFFERED *</pattern>
+        <template>
+            We offer comprehensive B.Tech programs:
+            1. Civil Engineering - 120 seats
+            2. Mechanical Engineering - 120 seats
+            3. ECE - 180 seats
+            4. CSE - 360 seats
+            5. Electrical &amp; Electronics - 120 seats
+            6. Chemical Engineering - 60 seats
+            7. Information Technology - 180 seats
+            8. AI &amp; ML specialization - 180 seats
+            9. Data Science specialization - 180 seats
+            10. IoT specialization - 60 seats
+        </template>
+    </category>
+
+    <!-- ================= POSTGRADUATE PROGRAMS ================= -->
+
+    <category>
+        <pattern>* PG * PROGRAMS *</pattern>
+        <template>
+            RVRJCCE offers 8 postgraduate programs with total intake of 216 seats.
+            M.C.A. - 60 seats, M.B.A. - 120 seats, M.Tech. programs in 6 specializations.
+            For details on M.Tech specializations and admission process, contact our admissions office.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* MASTERS * PROGRAMS *</pattern>
+        <template>
+            Postgraduate Programs at RVRJCCE:
+            M.C.A. (60 seats), M.B.A. (120 seats), M.Tech. Computer Science (6 seats), M.Tech. Structural Engineering (6 seats),
+            M.Tech. Power Systems (6 seats), M.Tech. VLSI (6 seats), M.Tech. Machine Design (6 seats),
+            M.Tech. AI &amp; Data Science (6 seats).
+        </template>
+    </category>
+
+    <!-- ================= ACADEMIC INFORMATION ================= -->
+
+    <category>
+        <pattern>* ACADEMIC * CALENDAR *</pattern>
+        <template>
+            The academic calendar follows the university schedule. Contact the examination section for detailed semester schedules.
+            Exam Cell: 9985271179, 9966641530
+        </template>
+    </category>
+
+    <category>
+        <pattern>* EXAMINATION * SCHEDULE *</pattern>
+        <template>
+            Internal exams: As per departmental schedule
+            Semester exams: As notified by the examination section
+            For exact dates, contact Examination Section: 9985271179, 9966641530
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CURRICULUM * COURSE *</pattern>
+        <template>
+            The curriculum is designed as per AICTE norms and university regulations.
+            For program-specific course details, visit our website or contact the concerned department.
+        </template>
+    </category>
+
+    <!-- ================= FINANCIAL INFORMATION ================= -->
+
+    <category>
+        <pattern>* FEE * STRUCTURE *</pattern>
+        <template>
+            Fee payment options available online. Categories:
+            1. Examination Fee
+            2. Tuition Fee &amp; Common Services Fee
+            3. Bus Charges Fee
+            For exact fee structure and payment schedules, visit xfeepayments.php or contact Finance at 9493239173, 9490032306.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SCHOLARSHIP *</pattern>
+        <template>
+            RVRJCCE offers various scholarships based on merit, need, and other criteria.
+            Scholarship Contact: 8790413309, 7901493318
+            For eligibility and application details, contact the scholarships office.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* PAYMENT *</pattern>
+        <template>
+            Online fee payments available through the college portal. Categories:
+            - Tuition Fee
+            - Examination Fee
+            - Bus Charges
+            For payment assistance, contact Finance: 9493239173, 9490032306
+        </template>
+    </category>
+
+    <!-- ================= CAMPUS FACILITIES ================= -->
+
+    <category>
+        <pattern>* HOSTEL * FACILITY *</pattern>
+        <template>
+            RVRJCCE provides premium hostel accommodations with excellent networking opportunities.
+            For hostel details and room allocation, visit xhostels.php or contact the hostel management.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* LIBRARY * FACILITY *</pattern>
+        <template>
+            Central Library provides access to academic resources, books, and digital materials.
+            All students are automatic library members.
+            Library: https://rvrjcce.ac.in/xlibrary.php
+            LMS/Moodle: http://courses.rvrjc.ac.in/moodle/
+        </template>
+    </category>
+
+    <category>
+        <pattern>* TRANSPORT * BUS *</pattern>
+        <template>
+            College operates a transport system with multiple routes.
+            Bus charges are levied separately and can be paid online.
+            For route details and timings, contact Transport Committee: https://rvrjcce.ac.in/transport.php
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CANTEEN * FOOD *</pattern>
+        <template>
+            Canteen provides affordable meals and refreshments.
+            Breakfast: 7:00 AM - 9:00 AM
+            Lunch: 11:00 AM - 12:00 PM and 1:00 PM - 2:00 PM
+            Weekly menus are displayed at the canteen.
+        </template>
+    </category>
+
+    <!-- ================= CAMPUS LIFE &amp; ACTIVITIES ================= -->
+
+    <category>
+        <pattern>* CAMPUS * LIFE *</pattern>
+        <template>
+            Campus life at RVRJCCE is vibrant and disciplined with numerous activities:
+            - Academic programs and workshops
+            - Cultural and sports activities
+            - Club-based programs
+            - NCC and NSS participation
+            - Departmental festivals
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CLUB * ACTIVITIES *</pattern>
+        <template>
+            Numerous clubs available including:
+            - Cultural Club: Drama, art, and entertainment
+            - IEEE Student Branch
+            - ISTE Chapter
+            - Innovation clubs (Innoforge, RJ E-Nest)
+            - Department-specific clubs
+            For more info: https://rvrjcce.ac.in/sico/index.php
+        </template>
+    </category>
+
+    <category>
+        <pattern>* NCC * NSS *</pattern>
+        <template>
+            NCC: Develops leadership and discipline through military-style training.
+            NSS: Promotes community service and social responsibility.
+            Both programs offer valuable co-curricular experiences.
+            Details: https://rvrjcce.ac.in/NCC/xncc.php and https://rvrjcce.ac.in/NSS/index.php
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CULTURAL * FESTIVAL *</pattern>
+        <template>
+            RVRJCCE organizes annual cultural festivals and departmental events.
+            Campus activities include academic, cultural, sports, and club-based programs.
+            For event details, check the college website or contact the Cultural Club.
+        </template>
+    </category>
+
+    <!-- ================= STUDENT SERVICES ================= -->
+
+    <category>
+        <pattern>* STUDENT * SERVICES *</pattern>
+        <template>
+            Student support services include:
+            - Bonafide and transcript services
+            - Document verification
+            - Grievance redressal
+            - Social protection cell
+            - Anti-ragging measures
+            - Student wellness center
+        </template>
+    </category>
+
+    <category>
+        <pattern>* BONAFIDE * CERTIFICATE *</pattern>
+        <template>
+            Bonafide certificates are processed through the Student Services office.
+            Application process: Submit written application through your department.
+            Processing time and fee details available at the office.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* TRANSCRIPT *</pattern>
+        <template>
+            Transcripts and Original Degree (OD) certificates are issued after clearing all dues.
+            Application through: Examination Section
+            Contact: 9985271179, 9966641530
+        </template>
+    </category>
+
+    <category>
+        <pattern>* GRIEVANCE *</pattern>
+        <template>
+            Student grievances can be filed through:
+            Grievance Redressal Cell: https://rvrjcce.ac.in/xstudgrievances.php
+            Internal Complaints Committee: https://rvrjcce.ac.in/xicicc.php
+            All complaints are addressed confidentially.
+        </template>
+    </category>
+
+    <!-- ================= PLACEMENTS &amp; TRAINING ================= -->
+
+    <category>
+        <pattern>* PLACEMENT * TRAINING *</pattern>
+        <template>
+            RVRJCCE has strong placement and training support.
+            Major recruiters include TCS, Cognizant, Infosys, Accenture, Capgemini, and 50+ other companies.
+            Training &amp; Placements: https://rvrjcce.ac.in/xtrainingandplacements.php
+        </template>
+    </category>
+
+    <category>
+        <pattern>* RECRUITER *</pattern>
+        <template>
+            RVRJCCE attracts 50+ leading companies for campus recruitment including:
+            TCS, Cognizant, Infosys, Accenture, Capgemini, HCL Tech, Tech Mahindra, Wipro,
+            and specialized firms in various sectors.
+            For placement statistics and details, contact Training &amp; Placements office.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CAREER * GUIDANCE *</pattern>
+        <template>
+            Career Guidance Cell assists students with:
+            - Skill development
+            - Placement preparation
+            - Interview guidance
+            - Career counselling
+            Career Guidance Cell: https://rvrjcce.ac.in/xcgc_about.php
+        </template>
+    </category>
+
+    <!-- ================= RESEARCH &amp; INNOVATION ================= -->
+
+    <category>
+        <pattern>* RESEARCH * INNOVATION *</pattern>
+        <template>
+            RVRJCCE promotes research and innovation through:
+            - R &amp; D Cell
+            - RJ E-NEST (iTBI): Incubation center
+            - AICTE-IDEA Lab
+            - Institution Innovation Council
+            - Smart India Hackathon participation
+            Contact: https://rvrjcce.ac.in/xaboutresearch.php
+        </template>
+    </category>
+
+    <category>
+        <pattern>* STARTUP * INCUBATION *</pattern>
+        <template>
+            RJ E-NEST (iTBI) provides startup incubation support with mentorship and resources.
+            Also available: AICTE-IDEA Lab, EDC Cell, and Innoforge club.
+            Details: https://rvrjcce.ac.in/rjenest
+        </template>
+    </category>
+
+    <!-- ================= ACCREDITATION &amp; RECOGNITION ================= -->
+
+    <category>
+        <pattern>* ACCREDITATION *</pattern>
+        <template>
+            RVRJCCE is:
+            - NAAC Accredited (7 times: 1998, 2002, 2007, 2012, 2017, 2021, 2022)
+            - AICTE Approved
+            - AUTONOMOUS institution (UGC autonomous order)
+            - NBA Accredited programs
+            - ISO 21001:2018 Certified
+        </template>
+    </category>
+
+    <category>
+        <pattern>* RANKING *</pattern>
+        <template>
+            RVRJCCE achievements:
+            - Swayam NPTEL AAA Grade (3rd consecutive time, 6th rank nationally, 1st in state)
+            - ARIIA Ranking: Top 100 private engineering colleges in India
+            - First engineering college in state with all eligible UG programs accredited
+            - NIRF Ranking 2025 participation
+        </template>
+    </category>
+
+    <!-- ================= ANTI-RAGGING &amp; SAFETY ================= -->
+
+    <category>
+        <pattern>* ANTI-RAGGING *</pattern>
+        <template>
+            RVRJCCE has zero-tolerance policy for ragging.
+            Details: https://rvrjcce.ac.in/xantiragging.php
+            All complaints are investigated confidentially.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CODE * CONDUCT *</pattern>
+        <template>
+            All students must follow the College Code of Conduct.
+            Document: https://rvrjcce.ac.in/files/CODE-OF-CONDUCT-2018.pdf
+            Violations are addressed through disciplinary procedures.
+        </template>
+    </category>
+
+    <!-- ================= CONTACT &amp; SUPPORT ================= -->
+
+    <category>
+        <pattern>* HELPLINE *</pattern>
+        <template>
+            RVRJCCE Helpline Numbers:
+            Admissions: 94910 73318
+            Examinations: 9985271179, 9966641530
+            Finance: 9493239173, 9490032306
+            Scholarships: 8790413309, 7901493318
+            Director F&amp;A: 9849519932
+            Principal: 9866281628
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CONTACT * DEPARTMENT *</pattern>
+        <template>
+            For department-specific contact information, visit:
+            College Services Directory: https://rvrjcce.ac.in/xstaffdirectory.php
+            Or call the main office: 94910 73317, 94910 73318
+        </template>
+    </category>
+
+    <!-- Default catch-all -->
+    <category>
+        <pattern>*</pattern>
+        <template>
+            I'm here to help with information about RVR Jyothi Rai College of Engineering.
+            Ask me about admissions, programs, campus facilities, or any college-related information.
+            For specific queries, contact our helpline: 94910 73317 or 94910 73318.
+        </template>
+    </category>
+
+</aiml>
