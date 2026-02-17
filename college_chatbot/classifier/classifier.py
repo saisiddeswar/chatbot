@@ -1,18 +1,21 @@
 from typing import Dict, Tuple
-
-import joblib
 import numpy as np
-
-# Load trained classifier
-classifier = joblib.load("classifier/classifier.pkl")
+from core.model_manager import ModelManager
 
 def predict_category(query: str) -> Tuple[str, float, Dict[str, float]]:
     """
     Predict the category of a user query with confidence scores.
+    Uses lazy-loaded classifier from ModelManager.
     
     Returns:
         (category: str, max_confidence: float, probabilities: Dict[str, float])
     """
+    classifier = ModelManager.get_classifier()
+    
+    if classifier is None:
+        # Fallback if classifier failed to load
+        return "General", 0.0, {}
+
     # Get prediction
     category = classifier.predict([query])[0]
     
@@ -28,3 +31,4 @@ def predict_category(query: str) -> Tuple[str, float, Dict[str, float]]:
         max_confidence = 1.0
     
     return category, max_confidence, probs_dict
+

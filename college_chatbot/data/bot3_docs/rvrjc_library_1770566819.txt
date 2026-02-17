@@ -1,0 +1,13 @@
+Source: https://rvrjcce.ac.in/library.php
+Section: LIBRARY
+--------------------------------------------------
+Welcome to RVR & JC College of Engg
+||
+ABOUT RVRJC   ||
+MANAGEMENT   ||
+ACADEMICS   ||
+DEPARTMENTS   ||
+CAMPUS LIFE
+||
+RESEARCH   ||
+PLACEMENTS ||

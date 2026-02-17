@@ -1,0 +1,34 @@
+Data Dir: d:\college_chatbot\college_chatbot\data\bot3_docs
+Out Dir: d:\college_chatbot\college_chatbot\embeddings\bot3_faiss_NEW
+Loading Embedding Model...
+Reading Documents...
+  - Loaded about.txt (5954 chars)
+  - Loaded csd_professional_elective.txt (977 chars)
+  - Loaded cse_ds_overview.txt (512 chars)
+  - Loaded cse_ds_semesters.txt (1490 chars)
+  - Loaded fee_structure.txt (2538 chars)
+  - Loaded gentext.txt (5648 chars)
+  - Loaded gentext1.txt (5648 chars)
+  - Loaded p1.txt (2146 chars)
+  - Loaded pg_academic_calendar_2025_26.txt (2746 chars)
+  - Loaded programs.txt (2146 chars)
+  - Loaded rvrjcce_about.txt (10867 chars)
+  - Loaded rvrjcce_campus_student_services.txt (12095 chars)
+  - Loaded rvrjcce_programs_admissions.txt (8522 chars)
+  - Loaded scholarships.txt (1744 chars)
+  - Loaded scraped_admissions.txt (848 chars)
+  - Loaded scraped_contact.txt (487 chars)
+  - Loaded scraped_general.txt (636 chars)
+  - Loaded scraped_placements.txt (414 chars)
+  - Loaded ug_academic_calendar_2025_26.txt (3318 chars)
+Loaded 19 documents.
+Chunking...
+Created 180 chunks.
+Generating Embeddings...
+Embeddings shape: (180, 384)
+Building FAISS Index...
+Index contains 180 vectors.
+Saving Files...
+  - Saved index to d:\college_chatbot\college_chatbot\embeddings\bot3_faiss_NEW\index.faiss
+  - Saved metadata to d:\college_chatbot\college_chatbot\embeddings\bot3_faiss_NEW\metadata.pkl
+DONE.

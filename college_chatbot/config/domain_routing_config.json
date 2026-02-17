@@ -1,0 +1,47 @@
+{
+    "domain_routing": {
+        "Admissions & Registrations": {
+            "primary": "BOT-2",
+            "fallback": "BOT-3",
+            "bot1_enabled": true,
+            "description": "Admissions processes, eligibility, dates"
+        },
+        "Financial Matters": {
+            "primary": "BOT-2",
+            "fallback": "BOT-3",
+            "bot1_enabled": true,
+            "description": "Fees, scholarships, payments, refunds"
+        },
+        "Academic Affairs": {
+            "primary": "BOT-2",
+            "fallback": "BOT-3",
+            "bot1_enabled": true,
+            "description": "Branches, syllabus, regulations, calendar"
+        },
+        "Student Services": {
+            "primary": "BOT-1",
+            "fallback": "BOT-2",
+            "description": "Certificates, bonafide, portal access"
+        },
+        "Campus Life": {
+            "primary": "BOT-2",
+            "fallback": "BOT-3",
+            "bot1_enabled": true,
+            "description": "Hostels, transport, facilities, library"
+        },
+        "General Information": {
+            "primary": "BOT-2",
+            "fallback": "BOT-1",
+            "description": "Location, contact, accreditation"
+        },
+        "Cross-Domain Queries": {
+            "primary": "BOT-2",
+            "fallback": "BOT-3",
+            "description": "Placements, internships, general stats"
+        }
+    },
+    "default_policy": {
+        "primary": "BOT-1-CHAIN", 
+        "fallback": "BOT-3"
+    }
+}

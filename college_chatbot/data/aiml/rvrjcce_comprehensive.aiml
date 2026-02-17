@@ -7,94 +7,207 @@
     <category>
         <pattern>* ABOUT * RVR *</pattern>
         <template>
-            R.V.R. &amp; J.C. College of Engineering is a leading engineering institution in Guntur, Andhra Pradesh.
-            The college offers UG and PG programs with a focus on academic innovation and engineering excellence.
-            We are AICTE approved and NAAC accredited with autonomous status.
+            R.V.R. &amp; J.C. College of Engineering (Rayapati Venkata Ranga Rao &amp; Jagarlamudi Chandramouli College of Engineering) is a premier engineering institution located in Chowdavaram, Guntur, Andhra Pradesh.
+            Established in 1985, it is autonomous, NAAC 'A+' accredited, and affiliated with Acharya Nagarjuna University.
+            We offer 8 B.Tech branches, 6 M.Tech specializations, MBA, and MCA programs.
         </template>
     </category>
 
     <category>
         <pattern>* COLLEGE * ADDRESS *</pattern>
         <template>
-            Main Campus: R.V.R. &amp;
- J.C. College of Engineering, Chandramoulipuram, Chowdavaram, Guntur-522 019, Andhra Pradesh.
-            City Office: SVN Colony, Opposite Chinmaya Vidyalaya, Guntur-522 006.
-            Phone: 94910 73317, 94910 73318
+            Address: R.V.R. &amp; J.C. College of Engineering,
+            Chandramoulipuram, Chowdavaram,
+            Guntur - 522 019,
+            Andhra Pradesh, India.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* WHERE * COLLEGE *</pattern>
+        <template>
+            The college is located at Chandramoulipuram, Chowdavaram, Guntur-522 019.
+            It is situated on the Guntur-Chennai Highway (NH-16), about 11 km from Guntur City Centre.
+            Google Maps Link: https://goo.gl/maps/RVRJCCE
         </template>
     </category>
 
     <category>
         <pattern>* COLLEGE * CONTACT *</pattern>
         <template>
-            General Contact: 94910 73317, 94910 73318
+            General Enquiry: 94910 73317, 94910 73318
+            Landline: 0863-2288254, 2288201
             Admissions: 94910 73318
-            City Centre: 0863-2232505
-            For other queries, contact the respective department directly.
+            City Office (Guntur): 99482 44111
+            Email: principal@rvrjc.ac.in, office@rvrjc.ac.in
         </template>
     </category>
+
+    <category>
+        <pattern>* PHONE *</pattern>
+        <template>
+            Reception: 0863-2288254
+            Mobile: 94910 73317, 94910 73318
+            Examination Cell: 99852 71179
+            Placement Cell: 98495 19932
+        </template>
+    </category>
+
+    <category>
+        <pattern>* EMAIL *</pattern>
+        <template>
+            Principal: principal@rvrjc.ac.in
+            General Office: office@rvrjc.ac.in
+            Admissions: rvrjcce.admissions@rvrjc.ac.in
+            Placements: placement@rvrjc.ac.in
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHERE IS THE COLLEGE</pattern>
+        <template><srai>LOCATION</srai></template>
+    </category>
+
+    <category>
+        <pattern>WHERE IS THE COLLEGE *</pattern>
+        <template><srai>LOCATION</srai></template>
+    </category>
+
+    <category>
+        <pattern>COLLEGE LOCATION</pattern>
+        <template><srai>LOCATION</srai></template>
+    </category>
+
+    <category>
+        <pattern>LOCATION OF COLLEGE</pattern>
+        <template><srai>LOCATION</srai></template>
+    </category>
+
+    <category>
+        <pattern>* LOCATION *</pattern>
+        <template><srai>LOCATION</srai></template>
+    </category>
+
+    <category>
+        <pattern>LOCATION</pattern>
+        <template>
+            R.V.R. &amp; J.C. College of Engineering is located in Chowdavaram, on the outskirts of Guntur City, Andhra Pradesh.
+            It is easily accessible via the Guntur-Chennai Highway (NH-16).
+            Distance: ~12 km from Guntur Railway Station and Bus Stand.
+            Google Maps: https://goo.gl/maps/RVRJCCE
+        </template>
+    </category>
+
+    <category>
+        <pattern>* WHERE * COLLEGE *</pattern>
+        <template><srai>LOCATION</srai></template>
+    </category>
+
+    <category>
+        <pattern>* MAP *</pattern>
+        <template>
+            You can find us here: Chandramoulipuram, Chowdavaram, Guntur-522 019.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* TIMING *</pattern>
+        <template>
+            College Timings: 8:00 AM to 5:00 PM (Monday to Saturday).
+            Office Hours: 9:00 AM to 5:00 PM.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* WORKING * HOURS *</pattern>
+        <template>
+            College Timings: 8:00 AM to 5:00 PM.
+            Administrative Office: 9:00 AM to 5:00 PM.
+        </template>
+    </category>
+
 
     <!-- ================= ADMISSION PROCESS ================= -->
 
+    <!-- ================= ADMISSION PROCESS (ROBUST) ================= -->
+
     <category>
-        <pattern>* ADMISSION * RVRJCCE *</pattern>
+        <pattern>ADMISSION</pattern>
+        <template><srai>ADMISSION PROCESS</srai></template>
+    </category>
+
+    <category>
+        <pattern>ADMISSIONS</pattern>
+        <template><srai>ADMISSION PROCESS</srai></template>
+    </category>
+
+    <category>
+        <pattern>* ADMISSION *</pattern>
+        <template><srai>ADMISSION PROCESS</srai></template>
+    </category>
+    
+    <category>
+        <pattern>ADMISSION PROCESS</pattern>
         <template>
-            RVRJCCE conducts admissions through EAPCET counselling (70% of seats) and Management quota (30% of seats).
-            Minimum qualification: 10+2 with Physics, Mathematics, Chemistry (MPC).
-            10% Lateral Entry seats available in the second year via ECET.
-            All admissions are ratified by the Government of Andhra Pradesh.
+            RVRJCCE Admission Process:
+            1. B.Tech (Category A - 70%): Through AP EAPCET counseling.
+            2. B.Tech (Category B - 30%): Management Quota based on JEE Mains/EAPCET/Inter marks.
+            3. Lateral Entry (10%): Through ECET for Diploma holders.
+            4. M.Tech/MBA/MCA: Through PGECET/GATE/ICET.
+            For details, visit: https://rvrjcce.ac.in/admission.php
         </template>
     </category>
 
     <category>
-        <pattern>* ADMISSION * ELIGIBILITY *</pattern>
+        <pattern>* ADMISSION PROCESS *</pattern>
+        <template><srai>ADMISSION PROCESS</srai></template>
+    </category>
+
+    <category>
+        <pattern>HOW TO JOIN *</pattern>
+        <template><srai>ADMISSION PROCESS</srai></template>
+    </category>
+
+    <category>
+        <pattern>HOW TO APPLY *</pattern>
+        <template><srai>ADMISSION PROCESS</srai></template>
+    </category>
+
+    <!-- HANDLING TYPOS -->
+    <category>
+        <pattern>* ADMISSON *</pattern>
+        <template><srai>ADMISSION PROCESS</srai></template>
+    </category>
+    
+    <category>
+        <pattern>ADMISSON</pattern>
+        <template><srai>ADMISSION PROCESS</srai></template>
+    </category>
+
+    <category>
+        <pattern>* ELIGIBILITY *</pattern>
         <template>
-            Eligibility for B.Tech: Completed 10+2 with MPC or equivalent.
-            EAPCET counselling rank is required for 70% of seats.
-            Lateral entry (2nd year) requires ECET rank.
-            Statutory reservations as per government norms are followed.
+            Eligibility Criteria:
+            - B.Tech: 10+2 with Physics, Chemistry, Math (Min 45% marks).
+            - M.Tech: B.Tech/B.E in relevant branch + GATE/PGECET.
+            - MBA/MCA: Any Degree + ICET rank.
         </template>
     </category>
 
     <category>
-        <pattern>* LATERAL * ENTRY *</pattern>
+        <pattern>* SEAT *</pattern>
         <template>
-            10% Lateral Entry seats are available in the second year B.Tech.
-            Candidates must have completed Diploma in Engineering from any recognized polytechnic.
-            ECET (Engineering Common Entrance Test) rank is required for lateral entry admissions.
-        </template>
-    </category>
-
-    <category>
-        <pattern>* EAPCET *</pattern>
-        <template>
-            EAPCET (Engineering Agricultural and Medical Common Entrance Test) is the entrance exam for engineering admissions in Andhra Pradesh.
-            RVRJCCE conducts 70% of admissions on EAPCET rank basis.
-            For more information, visit the EAPCET official website or contact our admissions office.
-        </template>
-    </category>
-
-    <!-- ================= UNDERGRADUATE PROGRAMS ================= -->
-
-    <category>
-        <pattern>* UG * PROGRAMS *</pattern>
-        <template>
-            RVRJCCE offers 10 B.Tech programs and 1 B.B.A. program.
-            B.Tech Programs: Civil, Mechanical, ECE, CSE, EEE, Chemical, IT, CSBS, CSE-AI/ML, CSE-DataScience, CSE-IoT.
-            Total UG Intake: 1,680 seats.
-            Contact admissions at 94910 73318 for more details.
-        </template>
-    </category>
-
-    <category>
-        <pattern>* CSE * PROGRAM *</pattern>
-        <template>
-            Computer Science &amp; Engineering (CSE) is the flagship program with specialized tracks:
-            - CSE: 360 seats
-            - CSE AI &amp; ML: 180 seats
-            - CSE Data Science: 180 seats
-            - CSE IoT: 60 seats
-            - Computer Science &amp; Business Systems: 60 seats
-            Total CSE Family: 840 seats
+             Intake Details:
+             - CSE: 360
+             - ECE: 180
+             - IT: 180
+             - EEE: 120
+             - Civil: 120
+             - Mech: 120
+             - Chemical: 60
+             - CSE-AI/ML: 180
+             - CSE-Data Science: 180
+             - CSE-IoT: 60
         </template>
     </category>
 
@@ -166,33 +279,132 @@
     <!-- ================= FINANCIAL INFORMATION ================= -->
 
     <category>
-        <pattern>* FEE * STRUCTURE *</pattern>
+        <pattern>FEE</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+
+    <category>
+        <pattern>FEES</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+
+    <category>
+        <pattern>* FEE</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+
+    <category>
+        <pattern>* FEES</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+
+    <category>
+        <pattern>FEE *</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+
+    <category>
+        <pattern>* FEE *</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>COLLEGE FEE</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+
+    <category>
+        <pattern>TUITION FEE</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+
+    <!-- Handling TUTION (Typo) and standalone TUITION -->
+    <category>
+        <pattern>TUTION</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+
+    <category>
+        <pattern>* TUTION *</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+
+    <category>
+        <pattern>TUTION *</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+
+    <category>
+        <pattern>* TUTION</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>TUITION</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+
+    <category>
+        <pattern>* TUITION *</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+    
+    <category>
+        <pattern>TUITION *</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+
+    <category>
+        <pattern>* TUITION</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
+    </category>
+
+    <category>
+        <pattern>FEE STRUCTURE</pattern>
         <template>
-            Fee payment options available online. Categories:
-            1. Examination Fee
-            2. Tuition Fee &amp; Common Services Fee
-            3. Bus Charges Fee
-            For exact fee structure and payment schedules, visit xfeepayments.php or contact Finance at 9493239173, 9490032306.
+            &lt;div class="fee-structure"&gt;
+                &lt;strong&gt;💰 Fee Structure (Per Annum)&lt;/strong&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;🎓 &lt;strong&gt;B.Tech Tuition Fee:&lt;/strong&gt; ₹76,340 (Convenor Quota)*&lt;/li&gt;
+                    &lt;li&gt;🎓 &lt;strong&gt;M.Tech Tuition Fee:&lt;/strong&gt; ₹43,000&lt;/li&gt;
+                    &lt;li&gt;📊 &lt;strong&gt;MBA:&lt;/strong&gt; ₹54,000&lt;/li&gt;
+                    &lt;li&gt;💻 &lt;strong&gt;MCA:&lt;/strong&gt; ₹45,000&lt;/li&gt;
+                    &lt;li&gt;🏠 &lt;strong&gt;Hostel Fee:&lt;/strong&gt; ₹55,000 - ₹65,000 (Approx.)&lt;/li&gt;
+                    &lt;li&gt;🚌 &lt;strong&gt;Transport:&lt;/strong&gt; ₹15,000 - ₹25,000 (Depending on distance)&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;br&gt;
+                &lt;em&gt;*Fees are subject to AP Government regulations.&lt;/em&gt;
+                &lt;br&gt;&lt;br&gt;
+                🔗 &lt;a href="https://rvrjcce.ac.in/xfeepayments.php" target="_blank"&gt;Click here for Online Fee Payment&lt;/a&gt;
+            &lt;/div&gt;
         </template>
+    </category>
+
+    <category>
+        <pattern>* FEE * STRUCTURE *</pattern>
+        <template><srai>FEE STRUCTURE</srai></template>
     </category>
 
     <category>
         <pattern>* SCHOLARSHIP *</pattern>
         <template>
-            RVRJCCE offers various scholarships based on merit, need, and other criteria.
-            Scholarship Contact: 8790413309, 7901493318
-            For eligibility and application details, contact the scholarships office.
+            RVRJCCE offers various scholarships:
+            - Jagananna Vidya Deevena (RTF)
+            - Jagananna Vasathi Deevena (MTF)
+            - Merit Scholarships by Management
+            - GATE/GPAT Stipends
+            Scholarship Section Contact: 87904 13309
         </template>
     </category>
 
     <category>
         <pattern>* PAYMENT *</pattern>
         <template>
-            Online fee payments available through the college portal. Categories:
-            - Tuition Fee
-            - Examination Fee
-            - Bus Charges
-            For payment assistance, contact Finance: 9493239173, 9490032306
+            Payment Modes:
+            - Online: Via college student portal (Debit/Credit/NetBanking)
+            - Demand Draft (DD): In favor of "Principal, RVR &amp; JC College of Engineering"
+            - Challan: At Andhra Bank / Union Bank on campus.
+            Finance Office: 94932 39173
         </template>
     </category>
 
@@ -454,9 +666,7 @@
     <category>
         <pattern>*</pattern>
         <template>
-            I'm here to help with information about RVR Jyothi Rai College of Engineering.
-            Ask me about admissions, programs, campus facilities, or any college-related information.
-            For specific queries, contact our helpline: 94910 73317 or 94910 73318.
+            Sorry, I don't have information on that.
         </template>
     </category>
 

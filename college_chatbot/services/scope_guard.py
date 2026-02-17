@@ -28,22 +28,64 @@ PROGRAMMING_PATTERNS = [
 ]
 
 
+GREETING_KEYWORDS = ["hi", "hello", "hey", "greetings", "good morning", "good afternoon", "good evening"]
+
+OUT_OF_SCOPE_RESPONSE = "I am a college bot. I can only answer questions related to RVR&JC College administration, admissions, and campus life."
+
+def is_greeting(query: str):
+    """Check if the query is just a greeting."""
+    q = query.strip().lower()
+    # Remove punctuation
+    q = re.sub(r'[^\w\s]', '', q)
+    return q in GREETING_KEYWORDS
+
 def scope_check(query: str):
     q = query.strip().lower()
 
-    # [OK] If query clearly college related
-    if any(k in q for k in COLLEGE_SCOPE_KEYWORDS):
-        return True, "college_scope"
+    # [OK] If query is a greeting, allow it (will be handled by main or bots)
+    if is_greeting(query):
+        return True, "greeting"
 
     # [FAIL] Out of scope patterns
     for pat in OUT_OF_SCOPE_PATTERNS:
         if re.search(pat, query):
             return False, "out_of_scope"
 
-    # [FAIL] programming scope (unless it's college portal related)
+    # [FAIL] Programming patterns (unless explicitly about curriculum)
+    # We might want to allow "python course" but block "write python code"
     for pat in PROGRAMMING_PATTERNS:
         if re.search(pat, query):
-            return False, "programming_out_of_scope"
+             # Hard block if purely asking for code
+             if "code" in q or "program" in q:
+                 return False, "programming_out_of_scope"
 
-    # Neutral (unknown) → allow (do not block)
+
+    # [OK] If query clearly college related
+    if any(k in q for k in COLLEGE_SCOPE_KEYWORDS):
+        return True, "college_scope"
+
+    # [NEUTRAL] - If it's very short and not matched, it might be out of scope
+    # User said: "if they ask out of scope apart from admistration or colege it should say i am college bot"
+    # So if it doesn't match college keywords and is not a greeting, we should be strict?
+    # But RAG queries might not contain keywords.
+    # Let's keep it permissive but rely on Bot 3 to say "No Info" if it really doesn't know.
+    
     return True, "neutral_allow"
+
+# ================= RAG Safety =================
+RAG_FORBIDDEN_PATTERNS = [
+    r"(?i)\blocation|address|where is the college|map\b",
+    r"(?i)\bphone|contact|number|email|call\b",
+    r"(?i)\btiming|opening hours|working hours|office hours\b",
+]
+
+def is_rag_forbidden(query: str) -> bool:
+    """
+    Check if query touches topics forbidden for RAG (Location, Contact, Timings).
+    These MUST be answered by Rule-Based Bot to prevent hallucinations.
+    """
+    for pat in RAG_FORBIDDEN_PATTERNS:
+        if re.search(pat, query):
+            return True
+    return False
+

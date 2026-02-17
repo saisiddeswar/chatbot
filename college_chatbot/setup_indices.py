@@ -23,18 +23,27 @@ print("="*70)
 project_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(project_dir)
 
+# Global imports
+import pickle
+import faiss
+import numpy as np
+import pandas as pd
+from sentence_transformers import SentenceTransformer
+
+# Load embedding model ONCE
+print("\n[INIT] Loading shared embedding model...")
+try:
+    embed_model = SentenceTransformer("all-MiniLM-L6-v2")
+    print("  [OK] Embedding model loaded: all-MiniLM-L6-v2")
+except Exception as e:
+    print(f"  [ERROR] Failed to load embedding model: {e}")
+    sys.exit(1)
+
 # ============== BUILD BOT-2 INDEX ==============
 print("\n[Step 1/3] Building Bot-2 (Semantic QA) FAISS Index...")
 print("-" * 70)
 
 try:
-    import pickle
-
-    import faiss
-    import numpy as np
-    import pandas as pd
-    from embeddings.embedder import embed
-    
     qa_files = [
         "data/bot2_qa/qa_dataset.csv",
         "data/bot2_qa/rvrjcce_qa_dataset.csv"
@@ -54,34 +63,33 @@ try:
     
     print(f"\n  [STATS] Total Q&A pairs: {len(all_questions)}")
     
-    # Create embeddings
-    print("  [WAIT] Creating embeddings...")
-    vectors = embed(all_questions)
-    print(f"  [OK] Embeddings created: shape {vectors.shape}")
-    
-    # Build FAISS index
-    print("  [WAIT] Building FAISS index...")
-    index = faiss.IndexFlatL2(vectors.shape[1])
-    index.add(vectors)
-    print(f"  [OK] FAISS index built: {index.ntotal} vectors")
-    
-    # Save index and QA pairs
-    os.makedirs("embeddings/bot2_faiss", exist_ok=True)
-    faiss.write_index(index, "embeddings/bot2_faiss/index.faiss")
-    
-    qa_data = [
-        {"question": q, "answer": a} 
-        for q, a in zip(all_questions, all_answers)
-    ]
-    
-    with open("embeddings/bot2_faiss/qa.pkl", "wb") as f:
-        pickle.dump(qa_data, f)
-    
-    print("  [OK] Bot-2 index saved successfully")
-    print(f"\n  [SUMMARY] Bot-2 Summary:")
-    print(f"     - Total Q&A pairs: {len(all_questions)}")
-    print(f"     - Embedding dimension: {vectors.shape[1]}")
-    print(f"     - Index file: embeddings/bot2_faiss/index.faiss")
+    if all_questions:
+        # Create embeddings
+        print("  [WAIT] Creating embeddings...")
+        vectors = embed_model.encode(all_questions, show_progress_bar=True)
+        print(f"  [OK] Embeddings created: shape {vectors.shape}")
+        
+        # Build FAISS index
+        print("  [WAIT] Building FAISS index...")
+        index = faiss.IndexFlatL2(vectors.shape[1])
+        index.add(vectors.astype(np.float32))
+        print(f"  [OK] FAISS index built: {index.ntotal} vectors")
+        
+        # Save index and QA pairs
+        os.makedirs("embeddings/bot2_faiss", exist_ok=True)
+        faiss.write_index(index, "embeddings/bot2_faiss/index.faiss")
+        
+        qa_data = [
+            {"question": q, "answer": a} 
+            for q, a in zip(all_questions, all_answers)
+        ]
+        
+        with open("embeddings/bot2_faiss/qa.pkl", "wb") as f:
+            pickle.dump(qa_data, f)
+        
+        print("  [OK] Bot-2 index saved successfully")
+    else:
+        print("  [WARNING] No Q&A pairs found, skipping Bot-2 index build.")
     
 except Exception as e:
     print(f"\n  [ERROR] Error building Bot-2 index: {e}")
@@ -93,13 +101,6 @@ print("\n[Step 2/3] Building Bot-3 (RAG) FAISS Index...")
 print("-" * 70)
 
 try:
-    from sentence_transformers import SentenceTransformer
-
-    # Load embedding model
-    print("  [WAIT] Loading embedding model...")
-    embed_model = SentenceTransformer("all-MiniLM-L6-v2")
-    print("  [OK] Embedding model loaded")
-    
     # Configuration
     DATA_DIR = "data/bot3_docs"
     INDEX_DIR = "embeddings/bot3_faiss"
@@ -157,45 +158,41 @@ try:
     
     print(f"\n  [STATS] Total chunks: {len(all_chunks)}")
     
-    # Create embeddings
-    print("  [WAIT] Creating embeddings...")
-    chunk_texts = [chunk["text"] for chunk in all_chunks]
-    embeddings = embed_model.encode(chunk_texts, show_progress_bar=False, convert_to_numpy=True)
-    print(f"  [OK] Embeddings created: shape {embeddings.shape}")
-    
-    # Build FAISS index
-    print("  [WAIT] Building FAISS index...")
-    dimension = embeddings.shape[1]
-    index = faiss.IndexFlatL2(dimension)
-    index.add(embeddings.astype(np.float32))
-    print(f"  [OK] FAISS index built: {index.ntotal} vectors")
-    
-    # Save index and metadata
-    print("  [WAIT] Saving index and metadata...")
-    os.makedirs(INDEX_DIR, exist_ok=True)
-    
-    faiss.write_index(index, os.path.join(INDEX_DIR, "index.faiss"))
-    
-    metadata = {
-        "total_chunks": len(all_chunks),
-        "chunks": all_chunks,
-        "embedding_model": "all-MiniLM-L6-v2",
-        "chunk_size": CHUNK_SIZE,
-        "chunk_overlap": CHUNK_OVERLAP,
-        "documents": list(set([c["source"] for c in all_chunks]))
-    }
-    
-    with open(os.path.join(INDEX_DIR, "metadata.pkl"), "wb") as f:
-        pickle.dump(metadata, f)
-    
-    print("  [OK] Bot-3 index saved successfully")
-    print(f"\n  [SUMMARY] Bot-3 Summary:")
-    print(f"     - Total chunks: {len(all_chunks)}")
-    print(f"     - Total documents: {len(metadata['documents'])}")
-    print(f"     - Embedding dimension: {dimension}")
-    print(f"     - Chunk size: {CHUNK_SIZE} chars")
-    print(f"     - Chunk overlap: {CHUNK_OVERLAP} chars")
-    print(f"     - Documents: {', '.join(sorted(metadata['documents']))}")
+    if all_chunks:
+        # Create embeddings
+        print("  [WAIT] Creating embeddings...")
+        chunk_texts = [chunk["text"] for chunk in all_chunks]
+        embeddings = embed_model.encode(chunk_texts, show_progress_bar=True, convert_to_numpy=True)
+        print(f"  [OK] Embeddings created: shape {embeddings.shape}")
+        
+        # Build FAISS index
+        print("  [WAIT] Building FAISS index...")
+        dimension = embeddings.shape[1]
+        index = faiss.IndexFlatL2(dimension)
+        index.add(embeddings.astype(np.float32))
+        print(f"  [OK] FAISS index built: {index.ntotal} vectors")
+        
+        # Save index and metadata
+        print("  [WAIT] Saving index and metadata...")
+        os.makedirs(INDEX_DIR, exist_ok=True)
+        
+        faiss.write_index(index, os.path.join(INDEX_DIR, "index.faiss"))
+        
+        metadata = {
+            "total_chunks": len(all_chunks),
+            "chunks": all_chunks,
+            "embedding_model": "all-MiniLM-L6-v2",
+            "chunk_size": CHUNK_SIZE,
+            "chunk_overlap": CHUNK_OVERLAP,
+            "documents": list(set([c["source"] for c in all_chunks]))
+        }
+        
+        with open(os.path.join(INDEX_DIR, "metadata.pkl"), "wb") as f:
+            pickle.dump(metadata, f)
+        
+        print("  [OK] Bot-3 index saved successfully")
+    else:
+        print("  [WARNING] No chunks found, skipping Bot-3 index build.")
 
 except Exception as e:
     print(f"\n  [ERROR] Error building Bot-3 index: {e}")
@@ -211,28 +208,27 @@ print("-" * 70)
 try:
     # Verify Bot-2
     print("  [WAIT] Verifying Bot-2 index...")
-    bot2_index = faiss.read_index("embeddings/bot2_faiss/index.faiss")
-    with open("embeddings/bot2_faiss/qa.pkl", "rb") as f:
-        bot2_qa = pickle.load(f)
-    
-    print(f"  [OK] Bot-2 index verified: {bot2_index.ntotal} vectors, {len(bot2_qa)} Q&A pairs")
+    if os.path.exists("embeddings/bot2_faiss/index.faiss"):
+        bot2_index = faiss.read_index("embeddings/bot2_faiss/index.faiss")
+        with open("embeddings/bot2_faiss/qa.pkl", "rb") as f:
+            bot2_qa = pickle.load(f)
+        print(f"  [OK] Bot-2 index verified: {bot2_index.ntotal} vectors, {len(bot2_qa)} Q&A pairs")
+    else:
+        print("  [WARN] Bot-2 index not found.")
     
     # Verify Bot-3
     print("  [WAIT] Verifying Bot-3 index...")
-    bot3_index = faiss.read_index("embeddings/bot3_faiss/index.faiss")
-    with open("embeddings/bot3_faiss/metadata.pkl", "rb") as f:
-        bot3_meta = pickle.load(f)
-    
-    print(f"  [OK] Bot-3 index verified: {bot3_index.ntotal} vectors, {bot3_meta['total_chunks']} chunks")
+    if os.path.exists("embeddings/bot3_faiss/index.faiss"):
+        bot3_index = faiss.read_index("embeddings/bot3_faiss/index.faiss")
+        with open("embeddings/bot3_faiss/metadata.pkl", "rb") as f:
+            bot3_meta = pickle.load(f)
+        print(f"  [OK] Bot-3 index verified: {bot3_index.ntotal} vectors, {bot3_meta['total_chunks']} chunks")
+    else:
+        print("  [WARN] Bot-3 index not found.")
     
     print("\n" + "="*70)
-    print("[OK] ALL INDICES BUILT AND VERIFIED SUCCESSFULLY!")
+    print("[OK] SETUP COMPLETED!")
     print("="*70)
-    print("\n[SUMMARY] Final Summary:")
-    print(f"   Bot-2 (Semantic QA): {bot2_index.ntotal} Q&A pairs ready")
-    print(f"   Bot-3 (RAG): {bot3_index.ntotal} chunks from {len(bot3_meta['documents'])} documents")
-    print("\n🚀 Your chatbot is ready to serve RVRJCCE queries!")
-    print("="*70 + "\n")
 
 except Exception as e:
     print(f"\n  [ERROR] Error verifying indices: {e}")

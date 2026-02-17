@@ -47,7 +47,7 @@ def is_gibberish(q: str) -> bool:
     q_clean = q.strip().lower().replace(" ", "")
     
     # Empty or too short
-    if len(q_clean) <= 2:
+    if len(q_clean) < 2: # Allow 2 letter words like 'hi'
         return True
 
     # Too many special characters
@@ -145,8 +145,12 @@ def validate_query(query: str) -> Tuple[bool, str]:
         return False, "Your message looks invalid. Please ask a proper question."
 
     # 7) LENGTH: MINIMUM CONTEXT
+    # Allow single-word greetings if they are valid words (scope guard will catch them)
+    # But block single letters or nonsense
     if len(q.split()) < 2:
-        return False, "Please provide more detail. Example: 'What is the hostel fee?'"
+        valid_singles = ["hi", "hello", "hey", "help", "menu", "start"]
+        if q.lower() not in valid_singles: 
+            return False, "Please provide more detail. Example: 'What is the hostel fee?'"
 
     # [OK] VALIDATION PASSED
     return True, "valid"

@@ -64,9 +64,43 @@ from main import handle_query
 @cl.on_chat_start
 async def on_chat_start():
     cl.user_session.set("chat_history", [])
+    
+    # Get Top FAQs
+    from core.stats_manager import StatsManager
+    top_questions = StatsManager.get_top_queries(n=4)
+    
+    actions = [
+        cl.Action(name="faq", value=q, label=q)
+        for q in top_questions
+    ]
+    
     await cl.Message(
-        content="👋 Hi! I'm the College Administrative Chatbot.\nAsk me about admissions, fees, campus, programs, placements, etc."
+        content="👋 *Hi! I'm the College Administrative Chatbot.*\n\nAsk me anything, or choose a popular question below:",
+        actions=actions
     ).send()
+
+@cl.action_callback("faq")
+async def on_action(action: cl.Action):
+    # Retrieve chat history
+    chat_history = cl.user_session.get("chat_history")
+    
+    # Send the user's "message" to the UI
+    await cl.Message(
+        content=action.value,
+        author="User"
+    ).send()
+    
+    # Process
+    try:
+        response = handle_query(action.value, chat_history)
+        chat_history.append((action.value, response))
+        
+        await cl.Message(content=response).send()
+        
+    except Exception as e:
+        await cl.Message(
+            content=f"❌ Error: {str(e)}"
+        ).send()
 
 
 @cl.on_message

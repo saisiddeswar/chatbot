@@ -1,0 +1,82 @@
+Fetching: https://rvrjcce.ac.in/
+  -> FAILED: https://rvrjcce.ac.in/ | Error: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+Fetching: https://rvrjcce.ac.in/message.php
+  -> FAILED: https://rvrjcce.ac.in/message.php | Error: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+Fetching: https://rvrjcce.ac.in/contactus.php
+  -> FAILED: https://rvrjcce.ac.in/contactus.php | Error: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+Fetching: https://rvrjcce.ac.in/principal.php
+  -> FAILED: https://rvrjcce.ac.in/principal.php | Error: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+Fetching: https://rvrjcce.ac.in/about_rvr.php
+  -> FAILED: https://rvrjcce.ac.in/about_rvr.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/about_rvr.php
+Fetching: https://rvrjcce.ac.in/vision_mission.php
+  -> FAILED: https://rvrjcce.ac.in/vision_mission.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/vision_mission.php
+Fetching: https://rvrjcce.ac.in/ranking.php
+  -> FAILED: https://rvrjcce.ac.in/ranking.php | Error: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+Fetching: https://rvrjcce.ac.in/governingbody.php
+  -> FAILED: https://rvrjcce.ac.in/governingbody.php | Error: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+Fetching: https://rvrjcce.ac.in/admission_procedure.php
+  -> FAILED: https://rvrjcce.ac.in/admission_procedure.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/admission_procedure.php
+Fetching: https://rvrjcce.ac.in/fee_structure.php
+  -> FAILED: https://rvrjcce.ac.in/fee_structure.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/fee_structure.php
+Fetching: https://rvrjcce.ac.in/academic_calendar.php
+  -> FAILED: https://rvrjcce.ac.in/academic_calendar.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/academic_calendar.php
+Fetching: https://rvrjcce.ac.in/regulations.php
+  -> FAILED: https://rvrjcce.ac.in/regulations.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/regulations.php
+Fetching: https://rvrjcce.ac.in/chemical_engineering/
+  -> FAILED: https://rvrjcce.ac.in/chemical_engineering/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/chemical_engineering/
+Fetching: https://rvrjcce.ac.in/civil_engineering/
+  -> FAILED: https://rvrjcce.ac.in/civil_engineering/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/civil_engineering/
+Fetching: https://rvrjcce.ac.in/computer_science_engineering/
+  -> FAILED: https://rvrjcce.ac.in/computer_science_engineering/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/computer_science_engineering/
+Fetching: https://rvrjcce.ac.in/computer_science_business_systems_tcs/
+  -> FAILED: https://rvrjcce.ac.in/computer_science_business_systems_tcs/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/computer_science_business_systems_tcs/
+Fetching: https://rvrjcce.ac.in/computer_science_engineering_ds/
+  -> FAILED: https://rvrjcce.ac.in/computer_science_engineering_ds/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/computer_science_engineering_ds/
+Fetching: https://rvrjcce.ac.in/computer_science_engineering_ai_ml/
+  -> FAILED: https://rvrjcce.ac.in/computer_science_engineering_ai_ml/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/computer_science_engineering_ai_ml/
+Fetching: https://rvrjcce.ac.in/computer_science_engineering_iot/
+  -> FAILED: https://rvrjcce.ac.in/computer_science_engineering_iot/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/computer_science_engineering_iot/
+Fetching: https://rvrjcce.ac.in/electronics_communication_engineering/
+  -> FAILED: https://rvrjcce.ac.in/electronics_communication_engineering/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/electronics_communication_engineering/
+Fetching: https://rvrjcce.ac.in/electrical_electronics_engineering/
+  -> FAILED: https://rvrjcce.ac.in/electrical_electronics_engineering/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/electrical_electronics_engineering/
+Fetching: https://rvrjcce.ac.in/information_technology/
+  -> FAILED: https://rvrjcce.ac.in/information_technology/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/information_technology/
+Fetching: https://rvrjcce.ac.in/mechanical_engineering/
+  -> FAILED: https://rvrjcce.ac.in/mechanical_engineering/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/mechanical_engineering/
+Fetching: https://rvrjcce.ac.in/computer_applications/
+  -> FAILED: https://rvrjcce.ac.in/computer_applications/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/computer_applications/
+Fetching: https://rvrjcce.ac.in/management_sciences_bba_mba/
+  -> FAILED: https://rvrjcce.ac.in/management_sciences_bba_mba/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/management_sciences_bba_mba/
+Fetching: https://rvrjcce.ac.in/mathematics_humanities/
+  -> FAILED: https://rvrjcce.ac.in/mathematics_humanities/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/mathematics_humanities/
+Fetching: https://rvrjcce.ac.in/chemistry/
+  -> FAILED: https://rvrjcce.ac.in/chemistry/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/chemistry/
+Fetching: https://rvrjcce.ac.in/physics/
+  -> FAILED: https://rvrjcce.ac.in/physics/ | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/physics/
+Fetching: https://rvrjcce.ac.in/placement_statistics.php
+  -> FAILED: https://rvrjcce.ac.in/placement_statistics.php | Error: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+Fetching: https://rvrjcce.ac.in/placement_recruiters.php
+  -> FAILED: https://rvrjcce.ac.in/placement_recruiters.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/placement_recruiters.php
+Fetching: https://rvrjcce.ac.in/placement_training.php
+  -> FAILED: https://rvrjcce.ac.in/placement_training.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/placement_training.php
+Fetching: https://rvrjcce.ac.in/library.php
+  -> FAILED: https://rvrjcce.ac.in/library.php | Error: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+Fetching: https://rvrjcce.ac.in/hostels.php
+  -> FAILED: https://rvrjcce.ac.in/hostels.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/hostels.php
+Fetching: https://rvrjcce.ac.in/transport.php
+  -> FAILED: https://rvrjcce.ac.in/transport.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/transport.php
+Fetching: https://rvrjcce.ac.in/sports.php
+  -> FAILED: https://rvrjcce.ac.in/sports.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/sports.php
+Fetching: https://rvrjcce.ac.in/ncc.php
+  -> FAILED: https://rvrjcce.ac.in/ncc.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/ncc.php
+Fetching: https://rvrjcce.ac.in/nss.php
+  -> FAILED: https://rvrjcce.ac.in/nss.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/nss.php
+Fetching: https://rvrjcce.ac.in/student_activity_center.php
+  -> FAILED: https://rvrjcce.ac.in/student_activity_center.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/student_activity_center.php
+Fetching: https://rvrjcce.ac.in/anti_ragging.php
+  -> FAILED: https://rvrjcce.ac.in/anti_ragging.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/anti_ragging.php
+Fetching: https://rvrjcce.ac.in/examination_section.php
+  -> FAILED: https://rvrjcce.ac.in/examination_section.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/examination_section.php
+Fetching: https://rvrjcce.ac.in/result.php
+  -> FAILED: https://rvrjcce.ac.in/result.php | Error: 404 Client Error: Not Found for url: https://rvrjcce.ac.in/result.php

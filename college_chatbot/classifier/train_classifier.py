@@ -7,8 +7,17 @@ from sklearn.pipeline import Pipeline
 # Load dataset
 df = pd.read_csv("data/classifier_data.csv")
 
-X = df["Question"]
-y = df["Category"]
+# Ensure column names map correctly if they differ
+# The new dataset has 'text' and 'category'. Let's handle both or rename.
+if 'text' in df.columns:
+    X = df["text"]
+else:
+    X = df["Question"]
+    
+if 'category' in df.columns:
+    y = df["category"]
+else:
+    y = df["Category"]
 
 # Pipeline: Vectorizer + Multinomial Naive Bayes
 model = Pipeline([

@@ -77,21 +77,34 @@ if not os.path.exists(DATA_DIR):
     print(f"[ERROR] Data directory not found: {DATA_DIR}")
     exit(1)
 
-txt_files = [f for f in os.listdir(DATA_DIR) if f.endswith(".txt")]
-print(f"Found {len(txt_files)} text files")
+# Recursively find all .txt files
+txt_files = []
+for root, dirs, files in os.walk(DATA_DIR):
+    for file in files:
+        if file.endswith(".txt"):
+            txt_files.append(os.path.join(root, file))
 
-for filename in sorted(txt_files):
-    filepath = os.path.join(DATA_DIR, filename)
+print(f"Found {len(txt_files)} text files in {DATA_DIR} and subdirectories")
+
+for filepath in sorted(txt_files):
+    # Use relative path for cleaner source metadata if possible
     try:
+        filename = os.path.basename(filepath)
+        # Try to get relative path from DATA_DIR for better context (e.g. website/home.txt)
+        try:
+            rel_source = os.path.relpath(filepath, DATA_DIR)
+        except ValueError:
+            rel_source = filename
+
         with open(filepath, "r", encoding="utf-8") as f:
             content = f.read().strip()
             if content:
                 # Chunk the document
-                chunks = chunk_document(content, filename)
+                chunks = chunk_document(content, rel_source)
                 all_chunks.extend(chunks)
-                print(f"  [OK] {filename}: {len(chunks)} chunks ({len(content)} chars)")
+                print(f"  [OK] {rel_source}: {len(chunks)} chunks ({len(content)} chars)")
     except Exception as e:
-        print(f"  [WARNING] Error loading {filename}: {e}")
+        print(f"  [WARNING] Error loading {filepath}: {e}")
 
 print(f"\n[STATS] Total chunks created: {len(all_chunks)}")
 

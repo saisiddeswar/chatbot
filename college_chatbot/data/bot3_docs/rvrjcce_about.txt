@@ -1,4 +1,4 @@
-# RVR Jyothi Rai College of Engineering - About the Institution
+# R.V.R. & J.C. College of Engineering - About the Institution
 
 ## Overview
 R.V.R. & J.C. College of Engineering is a premier engineering institution located in Guntur, Andhra Pradesh, India. The college is renowned for blending academic innovation with engineering excellence to provide a transformative educational experience.
@@ -70,7 +70,7 @@ Admissions to B.Tech programs are conducted as per Government of Andhra Pradesh 
 2. **Management Quota (30% seats)**: Merit/rank-based selections as per government directions
 3. **Lateral Entry (10% seats in 2nd year)**: For Diploma holders via ECET
 
-**Eligibility Criteria:**
+### Eligibility Criteria:
 - Minimum qualification: 10+2 with Physics, Mathematics, Chemistry (MPC)
 - EAPCET rank required for 70% seats
 - Statutory reservations as per government norms
@@ -100,7 +100,7 @@ All admissions are ratified by the Government of Andhra Pradesh.
 ### Canteen Services
 - **Breakfast**: 7:00 AM - 9:00 AM
 - **Lunch**: 11:00 AM - 12:00 PM and 1:00 PM - 2:00 PM
-- Affordable meals and refreshments
+- **Affordable meals and refreshments**
 - Weekly menus displayed at the canteen
 
 ### Transportation
@@ -252,4 +252,4 @@ RVRJCCE maintains high academic and institutional standards through:
 
 ## Conclusion
 
-RVR Jyothi Rai College of Engineering stands as a beacon of academic excellence and innovation in engineering education. With its commitment to combining academic rigor with practical skills development, strong industry partnerships, and comprehensive student support systems, RVRJCCE prepares graduates who are not only technically competent but also socially responsible and ready to contribute meaningfully to the profession and society.
+R.V.R. & J.C. College of Engineering stands as a beacon of academic excellence and innovation in engineering education. With its commitment to combining academic rigor with practical skills development, strong industry partnerships, and comprehensive student support systems, RVRJCCE prepares graduates who are not only technically competent but also socially responsible and ready to contribute meaningfully to the profession and society.

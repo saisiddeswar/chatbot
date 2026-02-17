@@ -7,7 +7,7 @@ def fetch_page_text(url: str) -> str:
     r = requests.get(url, headers=headers, timeout=20)
     r.raise_for_status()
 
-    soup = BeautifulSoup(r.text, "lxml")
+    soup = BeautifulSoup(r.text, "html.parser")
 
     # remove noise
     for tag in soup(["script", "style", "nav", "footer", "header"]):

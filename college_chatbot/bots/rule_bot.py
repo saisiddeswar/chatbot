@@ -1,30 +1,29 @@
-import aiml
+from core.model_manager import ModelManager
+from core.logger import get_logger
 
-
-import os
-
-# Load AIML kernel
-kernel = aiml.Kernel()
-
-# Load both default and RVRJCCE AIML files
-AIML_FILES = [
-    "data/aiml/admission_financial.aiml",
-    "data/aiml/rvrjcce_comprehensive.aiml"
-]
-
-for aiml_path in AIML_FILES:
-    if os.path.exists(aiml_path):
-        kernel.learn(aiml_path)
-    else:
-        print(f"[WARNING] AIML file not found at {aiml_path}")
+logger = get_logger("rule_bot")
 
 def get_rule_response(query: str) -> str:
     """
     Returns response from rule-based (AIML) chatbot
+    Uses lazy-loaded kernel from ModelManager.
     """
-    print("[DEBUG] Bot-1 received query")
-    response = kernel.respond(query)
+    # Lazy load kernel
+    kernel = ModelManager.get_aiml_kernel()
+    
+    if kernel is None:
+        logger.error("Failed to load AIML kernel")
+        return "Sorry, I'm having trouble accessing my rule database."
 
-    if response.strip() == "":
+    logger.debug(f"[DEBUG] Bot-1 checking query: {query}")
+    
+    # Ensure query is uppercase for AIML matching
+    clean_query = query.upper().strip()
+    response = kernel.respond(clean_query)
+    
+    logger.debug(f"[DEBUG] AIML Response for '{clean_query}': '{response}'")
+
+    if not response or response.strip() == "":
         return "Sorry, I don't have information on that."
+    
     return response

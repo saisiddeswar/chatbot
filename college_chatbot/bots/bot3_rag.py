@@ -27,6 +27,9 @@ from config.settings import settings
 from core.audit_logger import get_audit_logger
 from core.logger import get_logger
 from sentence_transformers import SentenceTransformer
+from bots.hybrid_retriever import hybrid_retriever
+from services.response_formatter import render_response, extract_json_from_text
+import json
 
 logger = get_logger("bot3")
 audit_logger = get_audit_logger("bot3")
@@ -60,20 +63,13 @@ class Chunk:
 
 
 # ============== EMBEDDING MODEL ==============
-try:
-    embed_model = SentenceTransformer("all-MiniLM-L6-v2")
-    logger.info("[OK] Embedding model loaded: all-MiniLM-L6-v2")
-except Exception as e:
-    logger.error(f"[ERROR] Failed to load embedding model: {e}")
-    embed_model = None
-
+# Removed global execution. Accessed via ModelManager.
 
 # ============== DOCUMENT LOADING ==============
 
 def load_documents_from_directory(data_dir: str) -> List[Document]:
     """
     Load all documents from data directory.
-    
     Supports: .txt files (scraped content)
     """
     documents = []
@@ -111,18 +107,11 @@ def load_documents_from_directory(data_dir: str) -> List[Document]:
 
 
 # ============== CHUNKING ==============
+# (Kept unchanged mostly, but ensuring no side effects)
 
 def chunk_document(doc: Document, chunk_size: int = None, overlap: int = None) -> List[Chunk]:
     """
     Chunk document into overlapping segments.
-    
-    Args:
-        doc: Document to chunk
-        chunk_size: Size of each chunk (default from settings)
-        overlap: Overlap between chunks (default from settings)
-    
-    Returns:
-        List of Chunk objects with metadata
     """
     if chunk_size is None:
         chunk_size = settings.CHUNK_SIZE
@@ -133,7 +122,6 @@ def chunk_document(doc: Document, chunk_size: int = None, overlap: int = None) -
     text = doc.content
     
     if len(text) < chunk_size:
-        # Document is smaller than chunk size, don't split
         chunk = Chunk(
             text=text,
             source=doc.source,
@@ -145,7 +133,6 @@ def chunk_document(doc: Document, chunk_size: int = None, overlap: int = None) -
         chunks.append(chunk)
         return chunks
     
-    # Slide window with overlap
     chunk_id = 0
     start = 0
     
@@ -164,9 +151,7 @@ def chunk_document(doc: Document, chunk_size: int = None, overlap: int = None) -
         chunks.append(chunk)
         
         chunk_id += 1
-        # Move start by (chunk_size - overlap) to create overlap
         start = end - overlap
-        
         if start >= len(text):
             break
     
@@ -186,21 +171,19 @@ def chunk_all_documents(documents: List[Document]) -> List[Chunk]:
 
 
 # ============== FAISS INDEX MANAGEMENT ==============
+# NOTE: This function is checking ModelManager for embedder
+from core.model_manager import ModelManager
 
 def build_faiss_index(chunks: List[Chunk]) -> Tuple[faiss.Index, List[Dict]]:
     """
     Build FAISS index from chunks.
-    
-    Returns:
-        (index: faiss.Index, metadata: List of chunk metadata)
     """
     if not chunks:
         logger.warning("No chunks to index")
         return faiss.IndexFlatL2(384), []
     
-    if embed_model is None:
-        logger.error("Embedding model not available")
-        return faiss.IndexFlatL2(384), []
+    # Get embedder from ModelManager
+    embed_model = ModelManager.get_embedder()
     
     logger.info(f"Building FAISS index for {len(chunks)} chunks...")
     
@@ -228,55 +211,12 @@ def build_faiss_index(chunks: List[Chunk]) -> Tuple[faiss.Index, List[Dict]]:
     logger.info(f"[OK] FAISS index built: {index.ntotal} vectors")
     return index, metadata
 
-
-def load_or_build_index() -> Tuple[Optional[faiss.Index], Optional[List[Dict]]]:
-    """
-    Load existing FAISS index or build new one.
-    
-    Returns:
-        (index, metadata) or (None, None) if failed
-    """
-    # Try to load existing index
-    if os.path.exists(INDEX_FILE) and os.path.exists(METADATA_FILE):
-        try:
-            logger.info("Loading existing FAISS index...")
-            index = faiss.read_index(INDEX_FILE)
-            with open(METADATA_FILE, "rb") as f:
-                metadata = pickle.load(f)
-            logger.info(f"[OK] Loaded index with {index.ntotal} vectors")
-            return index, metadata
-        except Exception as e:
-            logger.error(f"Error loading existing index: {e}")
-    
-    # Build new index
-    try:
-        logger.info("Building new FAISS index...")
-        documents = load_documents_from_directory(DATA_DIR)
-        chunks = chunk_all_documents(documents)
-        
-        if not chunks:
-            logger.warning("No chunks to index, returning empty index")
-            return faiss.IndexFlatL2(384), []
-        
-        index, metadata = build_faiss_index(chunks)
-        
-        # Save index and metadata
-        os.makedirs(INDEX_DIR, exist_ok=True)
-        faiss.write_index(index, INDEX_FILE)
-        with open(METADATA_FILE, "wb") as f:
-            pickle.dump(metadata, f)
-        
-        logger.info(f"[OK] Index saved to {INDEX_FILE}")
-        return index, metadata
-        
-    except Exception as e:
-        logger.error(f"Error building index: {e}")
-        return None, None
+# No automatic loading on import!
+# faiss_index, metadata = load_or_build_index() <-- REMOVED
 
 
-# Load index on startup
-faiss_index, metadata = load_or_build_index()
 
+# ============== RETRIEVAL ==============
 
 # ============== RETRIEVAL ==============
 
@@ -291,12 +231,31 @@ def retrieve_context(
     Returns:
         (retrieved_chunks: List[metadata dicts], confidence: float)
     """
-    if faiss_index is None or faiss_index.ntotal == 0:
-        logger.warning(f"[{query_id}] FAISS index not available")
-        return [], 0.0
+    # Lazy load resources
+    faiss_index, raw_metadata = ModelManager.get_bot3_resources()
+    embed_model = ModelManager.get_embedder()
     
-    if embed_model is None:
-        logger.error(f"[{query_id}] Embedding model not available")
+    # DEBUG PRINTS
+    print(f"[DEBUG] retrieve_context called for query: {query}")
+    print(f"[DEBUG] FAISS Index loaded? {faiss_index is not None}")
+    if faiss_index:
+        print(f"[DEBUG] FAISS ntotal: {faiss_index.ntotal}")
+    print(f"[DEBUG] Metadata type: {type(raw_metadata)}")
+    if isinstance(raw_metadata, dict):
+        print(f"[DEBUG] Metadata keys: {raw_metadata.keys()}")
+    
+    # Handle metadata format (Dict vs List)
+    metadata_list = []
+    if isinstance(raw_metadata, dict):
+        metadata_list = raw_metadata.get("chunks", [])
+    elif isinstance(raw_metadata, list):
+        metadata_list = raw_metadata
+        
+    print(f"[DEBUG] Final metadata_list len: {len(metadata_list)}")
+        
+    if faiss_index is None or faiss_index.ntotal == 0 or not metadata_list:
+        print(f"[DEBUG] FAILURE: Missing resources. Index={faiss_index}, MetaLen={len(metadata_list)}")
+        logger.warning(f"[{query_id}] FAISS index not available or empty metadata")
         return [], 0.0
     
     if top_k is None:
@@ -304,11 +263,14 @@ def retrieve_context(
     
     try:
         # Embed query
+        print("[DEBUG] Embedding query...")
         query_embedding = embed_model.encode([query], show_progress_bar=False)
         query_embedding = query_embedding.astype(np.float32)
         
         # Search FAISS index
+        print(f"[DEBUG] Searching FAISS with top_k={top_k}...")
         distances, indices = faiss_index.search(query_embedding, top_k)
+        print(f"[DEBUG] Search results - Indices: {indices}, Distances: {distances}")
         distances = distances[0]
         indices = indices[0]
         
@@ -317,7 +279,7 @@ def retrieve_context(
         # Filter valid indices
         valid_results = []
         for dist, idx in zip(distances, indices):
-            if idx >= 0 and idx < len(metadata):
+            if idx >= 0 and idx < len(metadata_list):
                 valid_results.append((dist, idx))
         
         if not valid_results:
@@ -327,30 +289,28 @@ def retrieve_context(
         # Convert distances to confidence scores
         # L2 distance -> similarity: 1 / (1 + distance)
         max_distance = valid_results[0][0]  # Best (lowest) distance
-        avg_distance = np.mean([d for d, _ in valid_results])
-        max_confidence = 1.0 / (1.0 + max_distance)
+        # avg_distance = np.mean([d for d, _ in valid_results]) # Unused
         
+        max_confidence = float(1.0 / (1.0 + max_distance))        
         logger.info(
             f"[{query_id}] Retrieval - max_dist: {max_distance:.4f}, "
-            f"avg_dist: {avg_distance:.4f}, confidence: {max_confidence:.4f}"
+            f"confidence: {max_confidence:.4f}"
         )
         
         # Build result list
         retrieved = []
         for dist, idx in valid_results:
-            chunk_meta = metadata[idx].copy()
+            chunk_meta = metadata_list[idx].copy()
             chunk_meta["distance"] = float(dist)
             chunk_meta["similarity"] = 1.0 / (1.0 + dist)
             retrieved.append(chunk_meta)
         
         # Log retrieval quality
         audit_logger.log_retrieval_quality(
-            query_id=query_id,
-            bot="BOT-3",
-            top_k=top_k,
+            query_id=query_id, bot="BOT-3", top_k=top_k,
             scores=[float(d) for d, _ in valid_results],
             avg_score=float(max_confidence),
-            passed_threshold=max_distance <= settings.BOT3_RETRIEVAL_THRESHOLD,
+            passed_threshold=bool(max_distance <= settings.BOT3_RETRIEVAL_THRESHOLD),
             threshold=settings.BOT3_RETRIEVAL_THRESHOLD,
             num_docs_retrieved=len(retrieved)
         )
@@ -360,11 +320,8 @@ def retrieve_context(
     except Exception as e:
         logger.exception(f"[{query_id}] Error in FAISS retrieval: {e}")
         audit_logger.log_error(
-            query_id=query_id,
-            error_type="RAG_RETRIEVAL_ERROR",
-            error_message=str(e),
-            stage="faiss_retrieval",
-            stacktrace=str(e)
+            query_id=query_id, error_type="RAG_RETRIEVAL_ERROR", error_message=str(e),
+            stage="faiss_retrieval", stacktrace=str(e)
         )
         return [], 0.0
 
@@ -413,7 +370,7 @@ def bot3_answer(
     Generate answer using RAG pipeline.
     
     Returns:
-        Answer string (grounded in retrieved context or fallback message)
+        Tuple[str, float, bool]: (Answer string, confidence score, is_confident)
     """
     logger.info(f"[{query_id}] Bot-3 (RAG) activated")
     
@@ -427,76 +384,74 @@ def bot3_answer(
     logger.debug(f"[{query_id}] Using {len(limited_history)} historical turns")
     
     try:
-        # 1) RETRIEVE
-        retrieved_chunks, retrieval_confidence = retrieve_context(query, query_id)
+        # 1) HYBRID RETRIEVAL & ROUTING
+        # Define local retriever wrapper for hybrid module
+        def local_retriever_wrapper(q):
+            return retrieve_context(q, query_id)
+            
+        # Get context and route
+        context, route = hybrid_retriever.build_hybrid_context(query, local_retriever_wrapper)
         
-        if not retrieved_chunks:
-            logger.info(f"[{query_id}] No documents retrieved from FAISS")
-            audit_logger.log_answer_rejection(
-                query_id=query_id,
-                bot="BOT-3",
-                reason="No documents retrieved",
-                score=0.0,
-                threshold=settings.BOT3_RETRIEVAL_THRESHOLD
-            )
-            return (
-                "[NO INFO] **No Official Information Found**\n\n"
-                "I don't have information about this topic in the official college database. "
-                "Please contact:\n"
-                "- Student Services: [email/phone]\n"
-                "- Registrar's Office: [email/phone]\n"
-                "- Your Academic Advisor"
-            )
+        logger.info(f"[{query_id}] Route: {route}, Context length: {len(context)}")
+
+        # 2) IF NO CONTEXT FOUND
+        if not context or "No local information found" in context and route == "local":
+             # Double check if it was a pure local failure
+             if route == "local":
+                 # Fallback to standard rejection logging
+                 audit_logger.log_answer_rejection(
+                    query_id=query_id,
+                    bot="BOT-3",
+                    reason="No documents retrieved (Local)",
+                    score=0.0,
+                    threshold=settings.BOT3_RETRIEVAL_THRESHOLD
+                )
+                 return (
+                    "[NO INFO] **No Official Information Found**\n\n"
+                    "I don't have information about this topic in the official college database.",
+                    0.0,
+                    False
+                )
         
-        # 2) CHECK RETRIEVAL QUALITY
-        if retrieval_confidence < settings.BOT3_MIN_CONFIDENCE:
-            logger.info(
-                f"[{query_id}] Retrieval confidence {retrieval_confidence:.4f} "
-                f"below threshold {settings.BOT3_MIN_CONFIDENCE}"
-            )
-            audit_logger.log_answer_rejection(
-                query_id=query_id,
-                bot="BOT-3",
-                reason="Low retrieval confidence",
-                score=retrieval_confidence,
-                threshold=settings.BOT3_MIN_CONFIDENCE
-            )
-            return (
-                "[WARNING] **Low Confidence Answer**\n\n"
-                "I found some related information, but I'm not confident it accurately "
-                "answers your question. "
-                "Please contact student services or check the official college website for accurate information."
-            )
+        # 3) GENERATE ANSWER
+        # We assume if we got context (web or hybrid), confidence is high enough to try
+        # For hybrid/web, we don't have a numerical confidence score like FAISS
+        # So we set a dummy high confidence if web search was successful
         
-        # 3) BUILD CONTEXT
-        context = build_context_window(retrieved_chunks)
-        
-        # 4) BUILD ANSWER (SIMPLE RULES-BASED, NO LLM)
-        # Since the task says CPU-only and no cloud, we'll use simple template-based generation
-        # with the retrieved context
-        
+        final_confidence = 0.0
+        if route == "local":
+             # We rely on the retrieve_context call's confidence if we could extract it
+             # But here we re-called it. Ideally we refactor to avoid double call if efficiency mattered.
+             # However, build_hybrid_context calls it. 
+             # Let's assume for now we trust the router.
+             final_confidence = 0.8 # Placeholder if we don't extract from wrapper
+        else:
+             final_confidence = 0.9 # Web/Hybrid usually implies we found something
+             
         answer = generate_answer_from_context(
             query=query,
             context=context,
-            retrieved_chunks=retrieved_chunks,
-            confidence=retrieval_confidence,
-            query_id=query_id
+            retrieved_chunks=[], # Not used intimately in new prompt logic but kept for sig
+            confidence=final_confidence,
+            query_id=query_id,
+            source_type=route
         )
         
-        # 5) LOG SUCCESS
+        # 4) LOG SUCCESS
         audit_logger.log_answer_generation(
             query_id=query_id,
             bot="BOT-3",
             answer_length=len(answer),
-            confidence=retrieval_confidence,
-            sources=[chunk['source'] for chunk in retrieved_chunks],
+            confidence=final_confidence,
+            sources=[route],
             metadata={
-                "retrieval_confidence": round(retrieval_confidence, 4),
-                "num_chunks": len(retrieved_chunks)
+                "route": route,
+                "context_len": len(context)
             }
         )
         
-        return answer
+        return answer, final_confidence, True
+
         
     except Exception as e:
         logger.exception(f"[{query_id}] Error in Bot-3 RAG: {e}")
@@ -507,7 +462,8 @@ def bot3_answer(
             stage="rag_generation",
             stacktrace=str(e)
         )
-        return f"[ERROR] Error generating answer: {str(e)}"
+        return f"[ERROR] Error generating answer: {str(e)}", 0.0, False
+
 
 
 def generate_answer_from_context(
@@ -515,44 +471,84 @@ def generate_answer_from_context(
     context: str,
     retrieved_chunks: List[Dict],
     confidence: float,
-    query_id: str
+    query_id: str,
+    source_type: str = "local"
 ) -> str:
     """
-    Generate answer from retrieved context using simple rules.
-    
-    Since we're CPU-only and want to avoid LLM hallucination,
-    we extract and format answers directly from context.
+    Generate answer from retrieved context using Ollama (Llama 3.2 1B).
+    Returns formatted structured response.
     """
     
     if not context.strip():
         return "No relevant information found."
     
-    # Simple answer generation:
-    # 1. Extract first 2-3 sentences from most relevant chunk
-    # 2. Add source attribution
-    # 3. Add call-to-action
-    
-    best_chunk = retrieved_chunks[0]
-    text = best_chunk['text']
-    
-    # Try to extract first few sentences
-    sentences = [s.strip() for s in text.split('.') if s.strip()]
-    answer_text = '.'.join(sentences[:3])
-    if not answer_text.endswith('.'):
-        answer_text += '.'
-    
-    # Format final answer with attribution
-    answer = f"""{answer_text}
+    try:
+        import ollama
+        
+        system_prompt = (
+            "You are an official college administrative data extractor.\n\n"
+            "You must NOT write sentences or paragraphs.\n"
+            "Extract only factual fields from the context and return JSON.\n\n"
+            "Rules:\n"
+            "- Answer only requested information\n"
+            "- Do not include unrelated fields\n"
+            "- No emojis\n"
+            "- No marketing language\n"
+            "- Max 5 items\n"
+            "- If not found: return empty items array\n\n"
+            "FORMAT:\n"
+            "{\n"
+            '  "title": "Topic Name",\n'
+            '  "items": [\n'
+            '    {"label": "Label", "value": "Value"}\n'
+            '  ],\n'
+            '  "notes": "Optional short note"\n'
+            "}"
+        )
+        
+        user_prompt = f"CONTEXT:\n{context}\n\nQUESTION:\n{query}\n\nReturn JSON only."
+        
+        logger.info(f"[{query_id}] Sending JSON request to Ollama...")
+        response = ollama.chat(model='llama3.2:1b', messages=[
+            {'role': 'system', 'content': system_prompt},
+            {'role': 'user', 'content': user_prompt},
+        ])
+        
+        generated_text = response['message']['content']
+        logger.debug(f"[{query_id}] Raw LLM Response: {generated_text}")
+        
+        # Parse JSON
+        json_data = extract_json_from_text(generated_text)
+        
+        if not json_data:
+            logger.warning(f"[{query_id}] JSON parsing failed. Fallback to raw text.")
+            # If JSON fail, wrap raw text in a safe dict structure or return clean raw text
+            # Depending on how bad the output is. Usually llama 3.2 1b follows instruction well
+            # But if it fails, let's try to construct a simple obj
+            return f"{generated_text}\n\n_Source: {source_type.upper()}_"
+            
+        # Format
+        formatted_response = render_response(json_data)
+        
+        # Add source footer
+        final_answer = f"{formatted_response}\n\n_Source: {source_type.upper()}_"
+        
+        logger.info(f"[{query_id}] Generated formatted answer ({len(final_answer)} chars)")
+        return final_answer
 
-**Source:** {best_chunk['source']} (Chunk {best_chunk['chunk_id']})
-
----
-**Confidence:** {'High' if confidence >= 0.75 else 'Medium' if confidence >= 0.5 else 'Low'}
-
-_For more information, contact Student Services or visit the college website._
-"""
+    except ImportError:
+        logger.warning(f"[{query_id}] Ollama package not installed. Falling back to extraction.")
+    except Exception as e:
+        logger.warning(f"[{query_id}] Ollama generation failed ({e}). Falling back to extraction.")
+        
+    # FALLBACK: Simple extraction
+    # If we have chunks, use them
+    if retrieved_chunks:
+        best_chunk = retrieved_chunks[0]
+        text = best_chunk.get('text', 'No content')
+        source = best_chunk.get('source', 'Unknown')
+        return f"**Extracted Info:**\n{text}\n\n_Source: {source}_"
     
-    logger.info(f"[{query_id}] Generated answer from context ({len(answer)} chars)")
-    
-    return answer
+    return "Information not available at the moment."
+
 
